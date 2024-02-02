@@ -1,0 +1,17 @@
+/* Heroheader */
+.heroheader-title{color:{{inverseTextColor}};padding-top:60px;margin:0px;font-size:50px;}
+.heroheader-subtitle{color:{{inverseTextColor}};font-size:30px;margin-top:0px;}
+.heroheader-version{color:{{inverseTextColor}};padding-bottom:60px;margin:0px;font-size:14px;}
+#titlebutton{background-color:{{accentColor}};}
+a:hover#titlebutton{color:{{inverseTextColor}};}
+#trianglify-content{background:linear-gradient(135deg, {{primaryDarkColor}}, {{primaryLightColor}});}
+
+/* Peptalks */
+.peptalkitem-icon{color:{{dividerColor}};}
+.peptalkitem-header{font-weight:350;}
+.peptalkitem-content{text-align:justify;}
+
+
+
+
+
