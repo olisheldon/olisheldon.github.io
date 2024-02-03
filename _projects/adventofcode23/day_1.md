@@ -1,5 +1,5 @@
 ---
-title: Sub Chapter 1
+title: Day 1
 description: Lorem ipsum dolor sit amet
 layout: nested
 ---

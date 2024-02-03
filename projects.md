@@ -5,5 +5,5 @@ navbaritem: true
 files:
   - 'adventofcode23'
 subfolders:
-  - 'nesteddemo'
+  - 'adventofcode23'
 ---
