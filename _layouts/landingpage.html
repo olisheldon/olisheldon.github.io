@@ -26,18 +26,7 @@
 		{% endfor %}
 	  </div>
 	</div>
-      
-    <div class="secondary-background">
-		<div class="container">
-			<h4 class="center-align news-header"> News </h4>
-			<div class="row">
-			{% assign news = site.landingpage | where_exp:"item", "item.layout == 'news'" | sort: "published_at" | reverse  %}
-				{% for new in news %}
-					{{- new.output -}}
-				{% endfor %}
-			</div>
-		</div>
-	</div>
+	
   </main>
 
     {% include templates/footer.html %}
