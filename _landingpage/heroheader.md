@@ -1,11 +1,9 @@
 ---
 layout: heroheader
 button:
-  text: Get Started!
+  text: My CV!
   url: https://sandared.github.io/documentation_template/documentation.html
-title: Project Documentation Template
-subtitle: The Easy Way Towards Project Documentation
-version: 1.0.0
+title: Oliver Sheldon GitHub Repository
+subtitle: Software Engineer || Computational Physicist
+version: 0.0.1
 ---
-
-This content is never used... We just need the information for the heroheader
