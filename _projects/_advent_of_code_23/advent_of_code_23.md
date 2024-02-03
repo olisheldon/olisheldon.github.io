@@ -3,8 +3,8 @@ layout: nested
 title: Advent of Code 2023
 description: My solutions for advent of code 2023
 files:
-  - 'day_1'
-  - 'day_2'
+  - 'day_pages/day_1'
+  - 'day_pages/day_2'
 ---
 
 # Lorem Ipsum 01

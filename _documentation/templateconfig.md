@@ -132,6 +132,8 @@ collections:
     output: true
   documentation:
     output: true
+  projects:
+    output: true
 ---
 ```
 
