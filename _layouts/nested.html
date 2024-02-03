@@ -28,7 +28,18 @@
 	{% assign rootPath = page.url | remove: ".html" | append: "/" %}
   <main>	
   <div class="container">
-		<div class="row">			
+		<div class="row">
+			
+		<div id="text-content" class="section col s12 l10">			
+			{{content}}
+		</div>
+		<div class="col hide-on-med-and-down l2">
+			<div id="toc-wrapper" class="toc-wrapper pin-top">
+				<ul id="toc" class="section table-of-contents">
+				
+				</ul>
+			</div>
+		</div>			
 		
 		
 		{% if isNested %}
@@ -84,16 +95,6 @@
 					</div>
 				</div>
 			{% endfor %}
-			<div id="text-content" class="section col s12 l10">			
-				{{content}}
-			</div>
-			<div class="col hide-on-med-and-down l2">
-				<div id="toc-wrapper" class="toc-wrapper pin-top">
-				  <ul id="toc" class="section table-of-contents">
-					
-				  </ul>
-				</div>
-			</div>
 		{% else %}
 			<div id="text-content" class="section col s12 l10">
 				{% include templates/breadcrumbs.html %}
