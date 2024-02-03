@@ -5,5 +5,5 @@ button:
   url: https://github.com/olisheldon/cv/blob/main/Oliver_Sheldon_CV.pdf
 title: Oliver Sheldon GitHub Repository
 subtitle: Software Engineer || Computational Physicist
-version: 0.0.1
+version: 03.02.2024
 ---
