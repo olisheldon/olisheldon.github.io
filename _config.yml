@@ -1,7 +1,7 @@
-title: PDT
-author: Thomas Driessen
-email: thomas.driessen.td@gmail.com
-description: A Project Documentation Template for Jekyll
+title: Oliver Sheldon GitHubIO
+author: Oliver Sheldon
+email: oliversheldon00@gmai.com
+description: Repository documentation
 
 # language to use in html tag, can be overriden by page.lang
 # lang: en 
@@ -22,16 +22,15 @@ colors:
     secondaryBackground: grey-lighten-4
 
 # path to logo without leading slash e.g. images/logo.png or just the file name if it is in the root directory
-logo: logo.png
+logo: assets/img/headshot_circle.png
 
 # Github data, if present there will be a GitHub button in the navbar
 github_button:
-  user: Sandared
-  project: documentation_template
+  user: olisheldon
 
 # Twitter data, if present there will be a Twitter button in the navbar
-twitter_button:
-  user: SanfteSchorle
+# twitter_button:
+#   user: SanfteSchorle
 
 # any of these collections is used for nested pages
 collections:
