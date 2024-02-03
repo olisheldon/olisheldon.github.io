@@ -1,10 +1,11 @@
 ---
 layout: nested
-title: Advent of Code 2023
-description: My solutions for advent of code 2023
+title: Nested Demo
+description: A demonstration of nested sites
 files:
-  - 'day_pages/day_1'
-  - 'day_pages/day_2'
+  - 'subchapter_1'
+  - 'subchapter_2'
+  - 'subchapter_3'
 ---
 
 # Lorem Ipsum 01
