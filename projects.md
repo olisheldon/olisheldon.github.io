@@ -2,8 +2,8 @@
 layout: nested
 title: Projects
 navbaritem: true
-files:
-  - 'adventofcode23'
+# files:
+#   - 'adventofcode23'
 subfolders:
   - 'adventofcode23'
 ---
