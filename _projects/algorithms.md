@@ -4,6 +4,7 @@ title: Algorithms
 description: Studying algorithms
 files:
   - 'levenshtein_distance'
+  - 'insertion_sort'
 ---
 
 # Studying algorithms
