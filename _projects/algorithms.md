@@ -5,6 +5,7 @@ description: Studying algorithms
 files:
   - 'levenshtein_distance'
   - 'insertion_sort'
+  - 'merge_sort'
 ---
 
 # Studying algorithms

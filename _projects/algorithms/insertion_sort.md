@@ -10,7 +10,7 @@ layout: nested
  - Iterative algorithm
  - Sort next element with know that preceeding elements are already sorted.
  - Iterative algorithm using pointer
- - Stable
+ - Stable sorting algorithm
 
  ```python
  def insertionSort(arr: list[int]) -> list[int]:
