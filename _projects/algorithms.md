@@ -6,6 +6,8 @@ files:
   - 'levenshtein_distance'
   - 'insertion_sort'
   - 'merge_sort'
+  - 'quick_sort'
+  - 'bucket_sort'
 ---
 
 # Studying algorithms
