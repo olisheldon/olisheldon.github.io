@@ -1,5 +1,5 @@
 ---
-title: Day 7
+title: Day 8
 description: NOT FINISHED. Difficulty ★
 layout: nested
 ---
