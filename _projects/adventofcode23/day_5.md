@@ -1,6 +1,6 @@
 ---
 title: Day 5
-description: Lorem ipsum dolor sit amet
+description: INCOMPLETE!
 layout: nested
 ---
 
