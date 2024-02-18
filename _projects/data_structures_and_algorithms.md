@@ -8,6 +8,7 @@ files:
   - 'quick_sort'
   - 'bucket_sort'
   - 'binary_search'
+  - 'binary_tree'
 ---
 
 # Studying data structures and algorithms
