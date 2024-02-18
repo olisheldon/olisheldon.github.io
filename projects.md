@@ -6,5 +6,6 @@ navbaritem: true
 #   - 'adventofcode23'
 subfolders:
   - 'adventofcode23'
-  - 'algorithms'
+  - 'data_structures_and_algorithms'
+  - 'advanced_algorithms'
 ---

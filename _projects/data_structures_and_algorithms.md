@@ -1,9 +1,8 @@
 ---
 layout: nested
-title: Algorithms
-description: Studying algorithms
+title: Data Structures and Algorithms
+description: DSA
 files:
-  - 'levenshtein_distance'
   - 'insertion_sort'
   - 'merge_sort'
   - 'quick_sort'
@@ -11,6 +10,6 @@ files:
   - 'binary_search'
 ---
 
-# Studying algorithms
+# Studying data structures and algorithms
 
 This page contains my data structures and algorithms notes.
