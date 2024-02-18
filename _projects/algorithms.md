@@ -8,6 +8,7 @@ files:
   - 'merge_sort'
   - 'quick_sort'
   - 'bucket_sort'
+  - 'binary_search'
 ---
 
 # Studying algorithms
