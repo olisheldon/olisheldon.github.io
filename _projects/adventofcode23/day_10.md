@@ -106,8 +106,9 @@ With these new rules,
 
 ### Part 1
 
-
 ### Part 2
+
+My implementation has a bug in it so I do not get the correct answer. Need to look into this.
 
 ### Algorithms
 
