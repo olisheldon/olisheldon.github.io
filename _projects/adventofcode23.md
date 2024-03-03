@@ -35,3 +35,33 @@ files:
 `Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like. People use them as interview prep, company training, university coursework, practice problems, a speed contest, or to challenge each other.`
 
 The pages found below document my solutions to the 2023 Advent of Code puzzles. These pages describe the problems, discuss my thought process, and explain ways that I will improve them in the future! The explanation will explain the style of solution that was used, how these map to common Leetcode-style problems, and visualizations of the solution where possible.
+
+## Completion
+
+| Day          | Part 1    | Part 2     |
+|--------------|-----------|------------|
+| 1            |     x     |      x     |
+| 2            |     x     |      x     |
+| 3            |     x     |      x     |
+| 4            |     x     |      x     |
+| 5            |     x     |      x     |
+| 6            |     x     |      x     |
+| 7            |     x     |      x     |
+| 8            |     x     |      x     |
+| 9            |     x     |      x     |
+| 10           |     x     |           |
+| 11           |     x     |      x     |
+| 12           |     x     |      x     |
+| 13           |     x     |      x     |
+| 14           |     x     |      x     |
+| 15           |     x     |      x     |
+| 16           |     x     |      x     |
+| 17           |     x     |      x     |
+| 18           |          |           |
+| 19           |     x     |           |
+| 20           |     x     |           |
+| 21           |     x     |           |
+| 22           |          |           |
+| 23           |          |           |
+| 24           |     x     |           |
+| 25           |          |           |
