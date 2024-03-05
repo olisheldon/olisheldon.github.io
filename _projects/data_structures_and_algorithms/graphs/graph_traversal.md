@@ -84,8 +84,8 @@ def bfs(grid: list[list[int]]) -> :
             if r == ROWS - 1 and c == COLS - 1:
                 return length
 
-            neighbors = [[0, 1], [0, -1], [1, 0], [-1, 0]]
-            for dr, dc in neighbors:
+            neighbours = [[0, 1], [0, -1], [1, 0], [-1, 0]]
+            for dr, dc in neighbours:
                 if (min(r + dr, c + dc) < 0 or
                     r + dr == ROWS or c + dc == COLS or
                     (r + dr, c + dc) in visit or grid[r + dr][c + dc] == 1):
@@ -131,8 +131,8 @@ def dfs(node: str, target: str, adj_list: dict[str, list[str]], visit: set[str])
     
     count = 0
     visit.add(node)
-    for neighbor in adj_list[node]:
-        count += dfs(neighbor, target, adj_list, visit)
+    for neighbour in adj_list[node]:
+        count += dfs(neighbour, target, adj_list, visit)
     visit.remove(node)
 
     return count
@@ -161,12 +161,11 @@ def bfs(node: str, target: str, adj_list: dict[str, list[str]]):
             if curr == target:
                 return length
 
-            for neighbor in adj_list[curr]:
-                if neighbor not in visit:
-                    visit.add(neighbor)
-                    queue.append(neighbor)
+            for neighbour in adj_list[curr]:
+                if neighbour not in visit:
+                    visit.add(neighbour)
+                    queue.append(neighbour)
         length += 1
-    return length
 
 print(bfs("A", "E", adj_list))
 ```
