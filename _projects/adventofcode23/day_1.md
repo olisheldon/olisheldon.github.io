@@ -1,6 +1,6 @@
 ---
 title: Day 1
-description: String parsing. Difficulty ★
+description: String parsing\nDifficulty ★
 layout: nested
 ---
 
