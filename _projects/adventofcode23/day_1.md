@@ -1,6 +1,6 @@
 ---
 title: Day 1
-description: String parsing, scanning, and manipulation
+description: String parsing
 layout: nested
 ---
 
@@ -14,7 +14,7 @@ layout: nested
 
 ## Description
 
-As the first problem of this year's Advent Of Code, this problem is very easy.
+The first problem of this year's Advent Of Code involves string parsing.
 
 ## Part 1
 
@@ -41,14 +41,17 @@ True
 True
 ```
 
-The time complexity of this algorithm is O(N) average. 
+The time complexity of this algorithm is `O(N**2)` average. 
 
 Before Python 3.10, the worst case performance was O(NM) where N is length of longest string and M is length of shorter string. [Boyer–Moore String-Search](https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm)
 
 As of Python 3.10, the worst case performance was improved to O(N + M) by using Crochemore and Perrin's [Two-way string-matching algorithm](https://en.wikipedia.org/wiki/Two-way_string-matching_algorithm). This is explained in [this write-up](https://github.com/python/cpython/blob/main/Objects/stringlib/stringlib_find_two_way_notes.txt).
 
-To improve performance I could utilize a sliding window that has limited size (and the length of substring we are searching for is [1, 5]). This would improve the time complexity of searching for the boundary digits to O(N) instead of O(N**2) by searching for substrings. (Explain why)
+If performance was an issue, I could utilize a sliding window that has limited size (and the length of substring we are searching for is [1, 5]). This would improve the time complexity of searching for the boundary digits.
 
 
 ### Software Engineering
 
+From a software quality perspective, my solution has been written in a way that minimizes code reuse. However, this comes at the expense of some performance (reversing strings). I have also standardized the logic for parsing values from the calibration string, so if the calibration value was parsed differently, the required change could be made very easily.
+
+For example, if in an imaginary part 3 we were told that reversed digits ("eno", "owt", ...) were negative integers this could be implemented by adding a new Enum value to ParseType. The use of the ParseType enum class to handle this logic has separated concerns.
