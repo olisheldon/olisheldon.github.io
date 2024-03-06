@@ -6,7 +6,7 @@ layout: nested
 
 # Day 4: Scratchcards
 
-[link](https://adventofcode.com/2023/day/4)
+[**link**](https://adventofcode.com/2023/day/4)
 
 ## Description
 

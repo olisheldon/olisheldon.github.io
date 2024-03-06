@@ -6,11 +6,11 @@ layout: nested
 
 # Day 16: The Floor Will Be Lava
 
-[link](https://adventofcode.com/2023/day/16)
+[**link**](https://adventofcode.com/2023/day/16)
 
-[input](https://adventofcode.com/2023/day/16/input)
+[**input**](https://adventofcode.com/2023/day/16/input)
 
-[code](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day16.py)
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day16.py)
 
 ## Description
 

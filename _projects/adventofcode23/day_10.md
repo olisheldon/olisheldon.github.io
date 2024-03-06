@@ -6,11 +6,11 @@ layout: nested
 
 # Day 10: Pipe Maze
 
-[link](https://adventofcode.com/2023/day/10)
+[**link**](https://adventofcode.com/2023/day/10)
 
-[input](https://adventofcode.com/2023/day/10/input)
+[**input**](https://adventofcode.com/2023/day/10/input)
 
-[code](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day10.py)
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day10.py)
 
 ## Description
 

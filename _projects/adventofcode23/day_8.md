@@ -6,11 +6,11 @@ layout: nested
 
 # Day 8: Haunted Wasteland
 
-[link](https://adventofcode.com/2023/day/8)
+[**link**](https://adventofcode.com/2023/day/8)
 
-[input](https://adventofcode.com/2023/day/8/input)
+[**input**](https://adventofcode.com/2023/day/8/input)
 
-[code](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day8.py)
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day8.py)
 
 ## Description
 

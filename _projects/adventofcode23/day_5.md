@@ -6,11 +6,11 @@ layout: nested
 
 # Day 5: If You Give A Seed A Fertilizer
 
-[link](https://adventofcode.com/2023/day/5)
+[**link**](https://adventofcode.com/2023/day/5)
 
-[input](https://adventofcode.com/2023/day/5/input)
+[**input**](https://adventofcode.com/2023/day/5/input)
 
-[code](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day5.py)
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day5.py)
 
 ## Description
 

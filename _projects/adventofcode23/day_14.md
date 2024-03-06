@@ -6,11 +6,11 @@ layout: nested
 
 # Day 14: Cosmic Expansion
 
-[link](https://adventofcode.com/2023/day/14)
+[**link**](https://adventofcode.com/2023/day/14)
 
-[input](https://adventofcode.com/2023/day/14/input)
+[**input**](https://adventofcode.com/2023/day/14/input)
 
-[code](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day14.py)
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day14.py)
 
 ## Description
 
@@ -42,7 +42,7 @@ For part 2, the complexity is increased massively. Instead of a single tilt in t
 
 This is equivalent to performing the algorithm for part one 1000000000 * 4 times! Although my part one solution is quite fast, this number of runs is not feasible in a realistic amount of time. In fact, I calculated that my part one solution would take 34348000 seconds or ~one year to complete.
 
-To complete this, it was important to realize that the process of tilting the ordinal directions pushed the rollable rocks to the outside of the 2D plane. Therefore, if we consider a state to be the position of every rock, as well as its rollability, on the plane we can utilize caching of these states to massively reduce our time complexity.
+To complete this, it was important to realize that the process of tilting the cardinal directions pushed the rollable rocks to the outside of the 2D plane. Therefore, if we consider a state to be the position of every rock, as well as its rollability, on the plane we can utilize caching of these states to massively reduce our time complexity.
 
 So this is what I did, I created a dictionary mapping a state (2D plane of rocks) to its next state. Then, while iterating if I found that a cycle resulted in the same score as the previous cycle then each cycle from this point *must* have an already calcualted end state. This means that all cycles from this point have already been determined and we can simply return the score from the beginning of this cycle.
 
@@ -58,4 +58,4 @@ I don't know of any algorithms to improve this solution.
 
 ### Software Engineering
 
-There is lots of repeated code in the algorithms for tilting in the ordinal directions. This could be greatly simplified, perhaps by exploiting the symmetry of tilting. i.e. You can tilt a 2D array in the southernly direction using a northernly algorithm by reversing the array.
+There is lots of repeated code in the algorithms for tilting in the cardinal directions. This could be greatly simplified, perhaps by exploiting the symmetry of tilting. i.e. You can tilt a 2D array in the southernly direction using a northernly algorithm by reversing the array.

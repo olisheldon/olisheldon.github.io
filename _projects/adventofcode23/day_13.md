@@ -6,11 +6,11 @@ layout: nested
 
 # Day 13: Point of Incidence
 
-[link](https://adventofcode.com/2023/day/13)
+[**link**](https://adventofcode.com/2023/day/13)
 
-[input](https://adventofcode.com/2023/day/13/input)
+[**input**](https://adventofcode.com/2023/day/13/input)
 
-[code](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day13.py)
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day13.py)
 
 ## Description
 

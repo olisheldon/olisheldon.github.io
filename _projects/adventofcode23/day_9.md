@@ -6,11 +6,11 @@ layout: nested
 
 # Day 9: Mirage Maintenance
 
-[link](https://adventofcode.com/2023/day/9)
+[**link**](https://adventofcode.com/2023/day/9)
 
-[input](https://adventofcode.com/2023/day/9/input)
+[**input**](https://adventofcode.com/2023/day/9/input)
 
-[code](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day9.py)
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day9.py)
 
 ## Description
 

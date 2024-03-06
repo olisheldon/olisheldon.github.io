@@ -6,11 +6,11 @@ layout: nested
 
 # Day 1: Trebuchet?!
 
-[link](https://adventofcode.com/2023/day/1)
+[**link**](https://adventofcode.com/2023/day/1)
 
-[input](https://adventofcode.com/2023/day/1/input)
+[**input**](https://adventofcode.com/2023/day/1/input)
 
-[code](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day1.py)
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day1.py)
 
 ## Description
 

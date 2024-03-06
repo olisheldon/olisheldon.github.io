@@ -6,11 +6,11 @@ layout: nested
 
 # Day 7: Camel Cards
 
-[link](https://adventofcode.com/2023/day/7)
+[**link**](https://adventofcode.com/2023/day/7)
 
-[input](https://adventofcode.com/2023/day/7/input)
+[**input**](https://adventofcode.com/2023/day/7/input)
 
-[code](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day7.py)
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day7.py)
 
 ## Description
 

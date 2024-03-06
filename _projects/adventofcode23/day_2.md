@@ -6,8 +6,11 @@ layout: nested
 
 # Day 2: Cube Conundrum
 
-[link](https://adventofcode.com/2023/day/2)
+[**link**](https://adventofcode.com/2023/day/2)
 
+[**input**](https://adventofcode.com/2023/day/2/input)
+
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day2.py)
 
 ## Description
 

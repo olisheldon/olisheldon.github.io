@@ -6,11 +6,11 @@ layout: nested
 
 # Day 12: Hot Springs
 
-[link](https://adventofcode.com/2023/day/12)
+[**link**](https://adventofcode.com/2023/day/12)
 
-[input](https://adventofcode.com/2023/day/12/input)
+[**input**](https://adventofcode.com/2023/day/12/input)
 
-[code](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day12.py)
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day12.py)
 
 ## Description
 

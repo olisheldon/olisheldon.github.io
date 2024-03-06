@@ -6,7 +6,7 @@ layout: nested
 
 # Day 3: Gear Ratios
 
-[link](https://adventofcode.com/2023/day/3)
+[**link**](https://adventofcode.com/2023/day/3)
 
 ## Description
 

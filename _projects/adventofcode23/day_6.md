@@ -6,8 +6,8 @@ layout: nested
 
 # Day 6: Wait For It
 
-[link](https://adventofcode.com/2023/day/6)
-[input](https://adventofcode.com/2023/day/6/input)
+[**link**](https://adventofcode.com/2023/day/6)
+[**input**](https://adventofcode.com/2023/day/6/input)
 
 ## Description
 

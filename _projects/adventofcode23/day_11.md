@@ -6,11 +6,11 @@ layout: nested
 
 # Day 11: Cosmic Expansion
 
-[link](https://adventofcode.com/2023/day/11)
+[**link**](https://adventofcode.com/2023/day/11)
 
-[input](https://adventofcode.com/2023/day/11/input)
+[**input**](https://adventofcode.com/2023/day/11/input)
 
-[code](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day11.py)
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day11.py)
 
 ## Description
 

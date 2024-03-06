@@ -6,11 +6,11 @@ layout: nested
 
 # Day 15: Lens Library
 
-[link](https://adventofcode.com/2023/day/15)
+[**link**](https://adventofcode.com/2023/day/15)
 
-[input](https://adventofcode.com/2023/day/15/input)
+[**input**](https://adventofcode.com/2023/day/15/input)
 
-[code](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day15.py)
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day15.py)
 
 ## Description
 
