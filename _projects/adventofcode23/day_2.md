@@ -1,6 +1,6 @@
 ---
 title: Day 2
-description: Constraint checking. Difficulty ★
+description: Constraint checking <br/> <br/> Difficulty ★
 layout: nested
 ---
 

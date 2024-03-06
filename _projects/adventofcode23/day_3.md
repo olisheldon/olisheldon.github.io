@@ -1,6 +1,6 @@
 ---
 title: Day 3
-description: 2D symbol map interpreting
+description: Grid parsing <br/> <br/> Difficulty ★
 layout: nested
 ---
 
@@ -8,9 +8,13 @@ layout: nested
 
 [**link**](https://adventofcode.com/2023/day/3)
 
+[**input**](https://adventofcode.com/2023/day/3/input)
+
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day3.py)
+
 ## Description
 
-This problem requires analysing an 'engine schematic' (2-D array of digits, symbols, and full stops).
+This problem requires analysing an 'engine schematic' (2D grid of digits, symbols, and full stops).
 
 ```
 467..114..
@@ -25,17 +29,21 @@ This problem requires analysing an 'engine schematic' (2-D array of digits, symb
 .664.598..
 ```
 
-A number within this schematic is a part-number if it is adjacent (including diagonally) to a symbol.
+This engine schematic is interpret as follows:
+
+ - Part numbers are adjacent (including diagonally) to at least one symbol (not including full stop).
 
 ## Part 1
 
 Return the sum of all part numbers in a given engine schematic.
 
+To do this, I parsed all of the numbers and into two separate containers and performed checks on the boundary of all numbers to check for gears.
+
 ## Part 2
 
-We now define a gear as any '*' symbol that is adjacent to exactly two part numbers. Its gear ratio is the result of multiplying those two numbers together.
+We now define a gear as any '*' symbol that is adjacent to exactly two part numbers. Its gear ratio is the result of multiplying those two numbers together. Return the sum of all gear ratios.
 
-Return the sum of all gear ratios.
+The same method as part 1 was used with different conditions.
 
 ## Improvements
 
@@ -45,4 +53,4 @@ The time complexity of my solution is linear O(N) where N is the number of chara
 
 ### Software Engineering
 
-the part_1() and part_2() methods contain too much logic. These should be pulled out into an 'Engine Schematic' class.
+The part_1() and part_2() (outside of the problems classes) methods contain too much logic. These should be pulled out into an 'Engine Schematic' class. However, the problem is not complex enough to warrant this.
