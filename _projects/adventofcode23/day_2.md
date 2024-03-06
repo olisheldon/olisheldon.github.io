@@ -1,6 +1,6 @@
 ---
 title: Day 2
-description: Constraint checking
+description: Constraint checking. Difficulty ★
 layout: nested
 ---
 
@@ -14,15 +14,17 @@ layout: nested
 
 ## Description
 
-This problem requires asserting whether pulling a number of coloured cubes from a bag, then replacing and repeating is possible, where we know the number of cubes of each colour in the bag.
+This problem requires asserting whether pulling a number of coloured cubes from a bag, then replacing and repeating, is possible. We know beforehand the number of cubes of each colour in the bag.
 
 ## Part 1
 
-This problem is a simple logic problem. The answer is the sum of game-ids for all possible games.
+This problem is a simple logic problem.
 
 ## Part 2
 
-Part 2 requires calculating the fewest number of cubes of each colour that are needed for each game that makes the game possible. The answer is the sum of the power of each set of required cubes, where the power is equal to the numbers of red, green, and blue cubes multiplied together.
+Part 2 requires calculating the fewest number of cubes of each colour that are needed for each game that makes the game possible. We must return the sum of the power of each set of required cubes, where the power is equal to the numbers of red, green, and blue cubes multiplied together.
+
+To achieve this, I made it possible for each DiceBag instance to track the maximum value of each colour dice encountered.
 
 
 ## Improvements
@@ -30,3 +32,7 @@ Part 2 requires calculating the fewest number of cubes of each colour that are n
 ### Algorithms
 
 There are no improvements possible for the time complexity of this problem.
+
+### Software Engineering
+
+I used a dictionary to map each dice bag's colour and count pair. This implementation detail was hidden from users by wrapping the dictionary in a class (DiceBag). This means that, in the future, if it was decided that there is a better data structure for this problem than a dictionary changes can be made without affecting the interface/functionality seen by users of the code.
