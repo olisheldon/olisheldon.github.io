@@ -40,13 +40,13 @@ The pages found below document my solutions to the 2023 Advent of Code puzzles. 
 
 | Day        | Desciption  | Part 1    | Part 2     | Written Up     |
 |------------|-------------|-----------|------------|----------------|
-| 1          |             |     x     |      x     |                |
-| 2          |             |     x     |      x     |                |
-| 3          |             |     x     |      x     |                |
-| 4          |             |     x     |      x     |                |
-| 5          |             |     x     |      x     |                |
-| 6          |             |     x     |      x     |                |
-| 7          |             |     x     |      x     |                |
+| 1          |             |     x     |      x     |       x        |
+| 2          |             |     x     |      x     |       x        |
+| 3          |             |     x     |      x     |       x        |
+| 4          |             |     x     |      x     |       x        |
+| 5          |             |     x     |      x     |       x        |
+| 6          |             |     x     |      x     |       x        |
+| 7          |             |     x     |      x     |       x        |
 | 8          |             |     x     |      x     |                |
 | 9          |             |     x     |      x     |                |
 | 10         |             |     x     |            |                |

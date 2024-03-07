@@ -1,6 +1,6 @@
 ---
 title: Day 8
-description: NOT FINISHED. Why does this aDifficulty ★
+description: Graph with no pathfinding <br/> <br/> Difficulty ★★
 layout: nested
 ---
 
