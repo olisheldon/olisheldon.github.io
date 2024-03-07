@@ -14,7 +14,7 @@ layout: nested
 
 ## Description
 
-Model a card game called 'Camel Cards' (like Poker but designed to be played on a camel(?))
+Model a card game called 'Camel Cards', a game like Poker but designed to be played on a camel(?).
 
 In Camel Cards, a player gets a number of hands, with an integer bid amount for each hand. A hand is an ordered list of five standard playing cards.
 
@@ -25,7 +25,7 @@ The ordering is defined by two properties of a hand:
  - Type
  - Card value
 
-A hand is ordered first on the Type. For hands of same Type, a strict ordering is enforced by comparing the cards within each hand in order, with the larger card defining the stronger hand.
+A hand is ordered first on the Type. For hands of the same Type, a strict ordering is enforced by comparing the cards within each hand in order, with the larger card defining the stronger hand.
 
 ### Type:
 
@@ -41,13 +41,11 @@ In order of weakening hands:
  - One pair: A23A4
  - High card: 23456
 
-### Card value
-
-For two hands of the same Type, the hands are strictly compared by comparing (in order) the cards. For each pair of cards between each hand, the hand that has the larger card within the pair is stronger.
-
 ## Part 1
 
-We must play a game of Camel Cards with a give set of hands and return the total winnings. The total winnings of a game is defined as the sum of rank * bid for each hand.
+We must play a game of Camel Cards with a given set of hands. We parse our set of hands from the input. We then follow the rules of Camel Cards and return the total winnings, where the total winnings of a game is defined as the sum of `rank * bid` for each hand.
+
+As playing a game of Camel Cards is really just sorting, I made use of default Python sorting behaviour to complete this part.
 
 ## Part 2
 
