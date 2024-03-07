@@ -1,6 +1,6 @@
 ---
 title: Day 6
-description: Difficulty ★
+description: SUVAT <br/> <br/> Difficulty ★
 layout: nested
 ---
 

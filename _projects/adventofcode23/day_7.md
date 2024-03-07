@@ -1,6 +1,6 @@
 ---
 title: Day 7
-description: Difficulty ★
+description: Sorting <br/> <br/> Difficulty ★
 layout: nested
 ---
 
