@@ -7,7 +7,10 @@ layout: nested
 # Day 6: Wait For It
 
 [**link**](https://adventofcode.com/2023/day/6)
+
 [**input**](https://adventofcode.com/2023/day/6/input)
+
+[**code**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day6.py)
 
 ## Description
 
@@ -19,9 +22,9 @@ The input to this problem is a number of time, distance pairs. Each of these rep
 
 ## Part 1
 
-This problem is very easy. `distance = t * (T - t)`, where T is the race time and t is the time spent pressing the button.
+This problem is very easy, and boils down to the formula `distance = t * (T - t)`, where T is the race time and t is the time spent pressing the button.
 
-The size of the problem we are tying to solve is also very small, with race times being of order 1e1. This removes the need for optimisation.
+The size of the problem we are tying to solve is also very small, with race times being ~10 seconds. This removes the need for optimisation.
 
 ## Part 2
 
@@ -34,13 +37,13 @@ This creates a race of time ~ 1e8. This still produces a small input that we can
 For the input given, this solution is sufficient. If the race times were much longer, or there were many more of them, many optimisations could be made:
 
  - Exploit the symmetry of problem (eg. in a 10 second race holding for 2 seconds and holding for 8 seconds achieve the same distance)
- - Find the time used in each race for the target distance using binary search (O(N) -> O(logN) search)
- - Solve the quadratic equation: `t * (T - t) = distance`
+ - Find the time used in each race for the target distance using binary search `(O(N) -> O(logN) search)`
+ - Solve the quadratic equation: `t * (T - t) = distance` for a constant time solution
 
 ### Algorithms
 
-Brute force
+I used brute force because the input size is small.
 
 ### Software Engineering
 
-The problem is so simple that there is little need for representing the problem nicely.
+
