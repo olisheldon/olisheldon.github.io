@@ -1,6 +1,6 @@
 ---
 title: Day 4
-description: Set intersections, stack <br/> <br/> Difficulty ★
+description: Sets <br/> <br/> Difficulty ★
 layout: nested
 ---
 

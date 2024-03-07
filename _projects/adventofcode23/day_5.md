@@ -1,6 +1,6 @@
 ---
 title: Day 5
-description: INCOMPLETE
+description: Intervals <br/> <br/> Difficulty ★★★★★
 layout: nested
 ---
 
@@ -15,8 +15,6 @@ layout: nested
 ## Description
 
 This problem is about 1-to-1 mappings of integers.
-
-For example:
 
 ```
 seeds: 79 14 55 13
@@ -54,27 +52,27 @@ humidity-to-location map:
 56 93 4
 ```
 
-The seed values, stated at the top, are passed through these maps producing a 'location' integer output. Each map contains a number of mappings that may change the value of the seed. These mappings, for example `50 98 2` in the seed-to-soil map gives us a _destination range_ of 50, a _source range start_ of 98, and a _range length_ of 2. This creates a mapping of 98 -> 50 and 99 -> 51. If a value queries a map that is not captured within the _source range start_ and _destination range_ of any mapping contained within it, the value passes through unchanged (identity).
+The seed values, stated at the top, are passed through maps producing a 'location' integer output. Each map contains a number of mappings that may change the value of the seed. For example, the mapping `50 98 2` in the seed-to-soil map gives us a _destination range_ of 50, a _source range start_ of 98, and a _range length_ of 2. This creates a mapping of 98 -> 50 and 99 -> 51. If a value queries a map that is not captured within the _source range start_ and _destination range_ of any mapping contained within it, the value passes through unchanged (identity operation).
 
 ## Part 1
 
 Part 1 has us query the seeds given at the start of the input one-by-one, and return the smallest resulting location number that corresponds to any of these initial seeds. 
 
-Looking at the input, seeds such as `2637529854` give us small hope to represent this problem easily in memory. As such, optimizations need to be made in how we treat the mappings.
+Looking at the actual input, seeds such as `2637529854` give us small hope to represent this problem in memory. As such, optimizations need to be made in how we treat the mappings.
 
-The optimization I used for part 1 was to realize that each mapping would offset the input value by the same amount within certain ranges of values, so mappings could be implemented as three values: `(lower, upper, offset)`, if a value queries a mapping such that `lower <= value < upper`, then, `value -> value + offset`. 
+The optimization I used for part 1 was to realize that each mapping would offset the input value by the same amount within certain ranges of values, so mappings could be implemented as three values: `(lower, upper, offset)`, if a value queries a mapping such that `lower <= value < upper`, then the mapping updates the value to `value -> value + offset`. 
 
-As there were only 20 seed values to query, this was optimized enough to get the answer quickly.
+As there are only 20 seed values to query, this is efficient enough to quickly receive the answer.
 
 ## Part 2
 
 For part 2, we no longer interpret the seeds as separate integer values. The seed values are instead pairs of values that represent an initial seed value and the number of seeds to consider after that. i.e. `79 14` correspond to the seeds values `79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92`.
 
-Although a small change to the idea, this showed the inefficiency of my solution to part 1. For the actual input, the first seed range we would now consider is `2637529854 223394899`, corresponding to 223394899 seeds. This is far too large for the original approach.
+Although a small change to the idea, this showed the inefficiency of my approach to solving part 1. For the actual input, the first seed range we would now consider is `2637529854 223394899`, corresponding to 223394899 seeds. For the approach taken in part 1, this would mean iterating `~1e9` times: Far too many making this approach impossible.
 
-We can no longer create a one-to-one mapping per value, but instead we must treat them as ranges. Therefore, when querying a mapping with a value, this value must be change to represent an interval of values. 
+Part 2 has essentially changed our input from individual seed values to intervals of values. I mirrored this change by changing my logic to handle mapping intervals of values (input seed intervals) by intervals of values (mappings). Therefore, when querying a mapping with a value, this value must be change to represent an interval of values. 
 
-Every time that an interval of values queries a mapping, anywhere between 1 and 3 intervals may be produced depending on how the interval and mapping intersects. This easiest to show visually:
+Each time that an interval of values queries a mapping, anywhere between 1 and 3 intervals may be produced depending on how the interval and mapping intersects. This easiest to show visually:
 
 ```
 SHOWING VISUALLY!
@@ -98,7 +96,7 @@ One idea I had was to add the ability to merge intervals. This operation would l
 merge( Interval(200, 300), Interval(250, 350) ) -> Interval(200, 350) 
 ```
 
-The idea behind this was to reduce the amount of redundant work, and to prevent the exponential growth of the number of intervals we were querying per mapping particularly as we approached the last 'layer' of the map. After I implemented this I found that this optimization made little to no different to the running time of this particular problem.
+The idea behind this was to reduce the amount of redundant work and to prevent the exponential growth of the number of intervals. After I implemented this I found that this optimization made little to no difference to the running time of this particular problem.
 
 Without optimization:
 ```bash
@@ -151,6 +149,6 @@ With this, we can see that this optimization does have a significant affect on t
 
 ### Software Engineering
 
-I found a very cool Python feature:
+I found a very nice Python feature:
 
 Instead of writing `lower <= x < upper` to test if a value is within an interval/range, you can instead write `x in range(lower, upper)`. In this example, Python utilizes the generator-nature of the range object to perform a check within the range without calling for the memory required to create a list [lower, ..., upper - 1].
