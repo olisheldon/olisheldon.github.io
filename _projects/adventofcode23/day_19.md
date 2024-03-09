@@ -1,6 +1,6 @@
 ---
-title: Day 19
-description: INCOMPLETE
+title: "Day 19: Aplenty"
+description: INCOMPLETE <br/> <br/> Difficulty ★★★
 layout: nested
 ---
 

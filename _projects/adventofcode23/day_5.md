@@ -1,6 +1,6 @@
 ---
 title: "Day 5: If You Give A Seed A Fertilizer"
-description: Intervals <br/> <br/> Difficulty ★★★
+description: Intervals <br/> Difficulty ★★★
 layout: nested
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Day 15: Lens Library"
-description: Hashing <br/> <br/> Difficulty ★
+description: Hashing <br/> <br/> <br/> Difficulty ★
 layout: nested
 ---
 

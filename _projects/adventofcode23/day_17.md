@@ -1,6 +1,6 @@
 ---
 title: "Day 17: Clumsy Crucible"
-description: Graph - Cost-minimizing path finding <br/> <br/> Difficulty ★★
+description: Cost-minimizing path finding <br/> <br/> Difficulty ★★
 layout: nested
 ---
 

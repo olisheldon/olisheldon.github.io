@@ -1,6 +1,6 @@
 ---
 title: "Day 13: Point of Incidence"
-description: Recursion <br/> <br/> Difficulty ★★
+description: Recursion <br/> Difficulty ★★
 layout: nested
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Day 16: The Floor Will Be Lava"
-description: Grid pathing <br/> <br/> Difficulty ★★
+description: Grid pathing <br/> Difficulty ★★
 layout: nested
 ---
 
