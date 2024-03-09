@@ -1,5 +1,5 @@
 ---
-title: Day 4
+title: "Day 4: Scratchcards"
 description: Sets <br/> <br/> Difficulty ★
 layout: nested
 ---

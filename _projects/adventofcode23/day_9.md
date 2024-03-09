@@ -1,5 +1,5 @@
 ---
-title: Day 9
+title: "Day 9: Mirage Maintenance"
 description: Extrapolation <br/> <br/> Difficulty ★
 layout: nested
 ---

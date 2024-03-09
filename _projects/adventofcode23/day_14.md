@@ -1,5 +1,5 @@
 ---
-title: Day 14
+title: "Day 14: Parabolic Reflector Dish"
 description: Physics simulation <br/> <br/> Difficulty ★★
 layout: nested
 ---

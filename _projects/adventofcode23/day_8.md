@@ -1,5 +1,5 @@
 ---
-title: Day 8
+title: "Day 8: Haunted Wasteland"
 description: Graph with no pathfinding <br/> <br/> Difficulty ★★
 layout: nested
 ---

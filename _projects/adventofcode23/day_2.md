@@ -1,5 +1,5 @@
 ---
-title: Day 2
+title: "Day 2: Cube Conundrum"
 description: Constraint checking <br/> <br/> Difficulty ★
 layout: nested
 ---

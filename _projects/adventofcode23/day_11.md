@@ -1,5 +1,5 @@
 ---
-title: Day 11
+title: "Day 11: Cosmic Expansion"
 description: L1 distance on 2D grid <br/> <br/> Difficulty ★
 layout: nested
 ---

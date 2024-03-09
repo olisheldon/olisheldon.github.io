@@ -1,5 +1,5 @@
 ---
-title: Day 15
+title: "Day 15: Lens Library"
 description: Hashing <br/> <br/> Difficulty ★
 layout: nested
 ---
