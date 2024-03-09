@@ -1,10 +1,10 @@
 ---
 title: Day 17
-description: INCOMPLETE
+description: Graph - Cost-minimizing path finding <br/> <br/> Difficulty ★★
 layout: nested
 ---
 
-# Day 17: Cosmic Expansion
+# Day 17: Clumsy Crucible
 
 [**link**](https://adventofcode.com/2023/day/17)
 
@@ -23,7 +23,8 @@ Our job is to find the path from the top-left square to the bottom-right square 
 
 ## Part 1
 
-This is path finding through a grid, minmizing the cost of this path. This is a classic problem that can be easily solved with Dijkstra's Algorithm [**link**](). It is possible to use simple breadth-first search to solve, but it will take an unfeasibly long amount of time to solve.
+This is path finding through a grid, minmizing the cost of this path. This is a classic problem that can be solved with Dijkstra's Algorithm [**link**](). It is possible to use simple breadth-first search to solve, but it will take an unfeasibly long amount of time to solve.
+
 
 Dijkstras Algorithm speeds up breadth-first search by replacing the queue of nodes to visit with a priority queue. This means that we will always look at the next node that is the most promising candidate for minimizing the cost. 
 

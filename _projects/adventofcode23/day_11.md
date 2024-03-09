@@ -1,6 +1,6 @@
 ---
 title: Day 11
-description: INCOMPLETE
+description: L1 distance on 2D grid <br/> <br/> Difficulty ★
 layout: nested
 ---
 
@@ -14,13 +14,13 @@ layout: nested
 
 ## Description
 
-This problem requires us to consider an image containing galaxies ('#') and empty space ('.'). In rows and columns containing only empty space, each empty space for that row or column is two units of space instead of one. 
+This problem requires us to consider an image containing galaxies ('#') and empty space ('.'). Some rows and columns only contain empty space. For these rows and columns, the empty space has expanded by a factor of two. 
 
 ## Part 1
 
-Consider each pair of galaxies, and calculate the distance between. Return the sum of these distances.
+For part 1, we consider each pair of galaxies and calculate the distance between _including_ the expanded space. The answer we must return is the sum of these distances.
 
-To do this, I preprocessed the image to recognise the colums and rows that should have the expansion coefficient applied. Then the problem is just a matter of iterating through each pair of galaxies, finding the columns and rows traversed in the L1 distance, and checking these columns and rows for being in the expanded rows or columns. From this, the sum of the distances can be returned.
+To do this, I preprocessed the image to recognise the columns and rows that should have the expansion coefficient applied. Then the problem is just a matter of iterating through each pair of galaxies, finding the columns and rows traversed in the L1 distance, and checking these columns and rows for being in the expanded rows or columns. From this, the sum of the distances can be returned.
 
 ## Part 2
 
@@ -30,7 +30,7 @@ Part 2 changes the problem to apply an expansion coefficient of 1000000 instead.
 
 ### Part 1
 
-The algorithm could be much improved through the use of a cache/memoization. 
+My algorithm could be improved through the use of a cache/memoization. 
 
 Consider:
 
@@ -41,12 +41,16 @@ Consider:
 .......  /     .......
 ```
 
-In calculating the distance between 1 and 3, if the distance between 2 and 3 is already known and stored we could solve the easier problem of calculating the distance between 1 and 2 and adding the distance from 2 to 3. 
+In calculating the distance between 1 and 3, if the distance between 2 and 3 is already known and stored we could solve the easier problem of calculating the distance between 1 and 2 and adding the distance from 2 to 3. It would be interesting to consider how this would affect the time complexity.
 
 ### Part 2
 
-The improvement suggested above would speed up part too as well.
+Part 2 does not make my solution any more complex, as the same number of operations are performed. The improvement suggested in part 1 improvements is also applicable to improving part 2.
 
 ### Algorithms
 
+My solution has time complexity `O(N**2)`, but I believe this is ideal; The improvement suggested in part 1 would only improve the constants of this time complexity. This is because we are always going to have to consider all pairs of galaxies, which requires iterating through `(O(N))` galaxies for each galaxy `(O(N))`.
+
 ### Software Engineering
+
+My solution to part 1 and part 2 use the same logic. This is a sign of a nicely written solution.

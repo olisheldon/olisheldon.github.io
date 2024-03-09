@@ -48,15 +48,15 @@ The pages found below document my solutions to the 2023 Advent of Code puzzles. 
 | 6          |             |     x     |      x     |       x        |
 | 7          |             |     x     |      x     |       x        |
 | 8          |             |     x     |      x     |                |
-| 9          |             |     x     |      x     |                |
+| 9          |             |     x     |      x     |       x        |
 | 10         |             |     x     |            |                |
-| 11         |             |     x     |      x     |                |
-| 12         |             |     x     |      x     |                |
-| 13         |             |     x     |      x     |                |
-| 14         |             |     x     |      x     |                |
-| 15         |             |     x     |      x     |                |
-| 16         |             |     x     |      x     |                |
-| 17         |             |     x     |      x     |                |
+| 11         |             |     x     |      x     |       x        |
+| 12         |             |     x     |      x     |       x        |
+| 13         |             |     x     |      x     |       x        |
+| 14         |             |     x     |      x     |       x        |
+| 15         |             |     x     |      x     |       x        |
+| 16         |             |     x     |      x     |       x        |
+| 17         |             |     x     |      x     |       x        |
 | 18         |             |           |            |                |
 | 19         |             |     x     |            |                |
 | 20         |             |     x     |            |                |

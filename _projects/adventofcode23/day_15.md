@@ -1,6 +1,6 @@
 ---
 title: Day 15
-description: INCOMPLETE
+description: Hashing <br/> <br/> Difficulty ★
 layout: nested
 ---
 
@@ -31,7 +31,7 @@ The hash of the string contained within each instruction is the index of the box
 
 Instructions may contain either a '-' or '=' sign, indicating the operation to apply to the boxes.
 
- - '-' : Move to the relevant box, and remove the lens with the given label if it is present in the box, then move move any removing lenses forward in the box. This instruction has no affect if the given label is not present within the box. 
+ - '-' : Move to the relevant box, and remove the lens with the given label if it is present in the box, then move any remaining lenses forward in the box. This instruction has no affect if the given label is not present within the box. 
  - '=' : Instructions containing an equals sign are followed by an integer that should be interpreted as a 'focal length'. If a lens with the same label is already present, replace the old lens with the new lens. Otherwise, if there is not a lens with that label in the box, add the lens to the back of the box. 
 
 
@@ -61,4 +61,4 @@ My only issue with part 2 of this problem was my choice to implement the boxes a
 
 ### Software Engineering
 
-It was nice to use an abstract base class to define an interface for the instructions. This resulted in readable code.
+It was nice to use an abstract base class to define an interface for the instructions. This resulted in nice, readable code.

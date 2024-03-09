@@ -1,6 +1,6 @@
 ---
 title: Day 10
-description: INCOMPLETE
+description: Graph no pathfinding <br/> <br/> Difficulty ★★
 layout: nested
 ---
 
@@ -18,7 +18,9 @@ In day 10 we are asked to consider a 2D grid of tiles. Each tile can be occupied
 
 ## Part 1
 
-It is tempting to interpret this problem as a graph, but it is actually much simpler. As we are given a starting position within the pipe, and are guaranteed that the pipe forms a loop we just need to follow the logic of the pipe we are entering and bear in mind the direction in which we entered the pip.
+For part 1, we need to analyse the loop containing the starting position, and return furthest distance (L1) from the starting point moving within this loop.
+
+It is tempting to interpret this problem as a graph, but it is actually much simpler. As we are given a starting position within the pipe, and are guaranteed that the pipe forms a loop we just need to follow the logic of the pipe we are entering and bear in mind the direction in which we entered the pipe.
 
 ## Part 2
 
@@ -50,6 +52,8 @@ but also
 .|..||..|.    .|II||II|.
 .L--JL--J.    .L--JL--J.
 ..........    ..........
+
+(Taken from [**Advent of Code Day 10 Example**](https://adventofcode.com/2023/day/10))
 ```
 
 A strategy for checking whether a coordinate is inside or outside of a loop is to count the number of times the loop is crossed. Looking at this, a few rules can be made:
@@ -59,11 +63,11 @@ A strategy for checking whether a coordinate is inside or outside of a loop is t
 
 However, coding this implementation still gave me an incorrect answer. After some more thinking, it is clear that these rules for determining regions inside and outside of the loop, while correct, require a stricter definition of crossing the loop.
 
-### Crossing Examples
+#### Crossing Examples
 
 Consider the following examples where '>' shows our position and direction we are considering:
 
-#### Crossing Example 1
+##### Crossing Example 1
 
 ```
 >|
@@ -71,7 +75,7 @@ Consider the following examples where '>' shows our position and direction we ar
 
 This is clear crossing.
 
-#### Crossing Example 2
+##### Crossing Example 2
 
 ```
 >-
@@ -79,7 +83,7 @@ This is clear crossing.
 
 For this example, we must already be on a pipe that connects to this one, so this does not cross.
 
-#### Crossing Example 3
+##### Crossing Example 3
 
 ```
 >L-7
@@ -87,19 +91,15 @@ For this example, we must already be on a pipe that connects to this one, so thi
 
 How many crossings does this contain? I argue one (consider a 2D line, how many times would it cross?)
 
-#### Crossing Example 4
+##### Crossing Example 4
 
 ```
 >F-7
 ```
 
-### Summary
+### Part 2 Summary
 
-Proof?
-
-With these new rules, 
-
-
+With these extra rules for crossing, I still do not have the correct answer :(
 
 
 ## Improvements

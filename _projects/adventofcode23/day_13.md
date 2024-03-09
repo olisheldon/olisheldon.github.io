@@ -1,6 +1,6 @@
 ---
 title: Day 13
-description: INCOMPLETE
+description: Recursion <br/> <br/> Difficulty ★★
 layout: nested
 ---
 
@@ -14,7 +14,7 @@ layout: nested
 
 ## Description
 
-We are asked to consider a number of patterns. These patterns are 2D lists containing two types of element: ash and rock. Within these patterns are a number of horizontal and vertical lines that can be correctly interpreted as a reflecting boundary.
+In this problem we consider a number of patterns. These patterns are 2D lists containing two types of element: ash ('.') and rock ('#'). Within these patterns are a number of horizontal and vertical lines create valid reflecting boundaries.
 
 For the problem, we must find these horizontal (row-wise) and vertical (column-wise) boundary indices, and sum `100 * row_index + column_index` for each pattern. 
 
@@ -26,17 +26,15 @@ For part 1, the predicate for finding the reflection boundary is to perform a re
 
 ## Part 2
 
-Upon closer inspection, you discover that every mirror has exactly one smudge: exactly one . or # should be the opposite type.
+For part 2, the problem is made more complex: Upon closer inspection, we discover that every mirror has exactly one smudge, one piece of ash or rock that should be the opposite type.
 
-In each pattern, you'll need to locate and fix the smudge that causes a different reflection line to be valid. (The old reflection line won't necessarily continue being valid after the smudge is fixed.)
+In each pattern, we need to locate and fix the smudge that causes a different reflection line to be valid. (The old reflection line won't necessarily continue being valid after the smudge is fixed.)
 
-For part 2, we are told that each pattern has exactly one mistake in it. That means that for each pattern one piece of rock or ash needs to be swapped. We are told that the piece of ash or rock that needs to be swapped will cause another reflection line to be valid. 
+Immediately, I began thinking this would require iterating over all possible patterns and looking for which one causes this condition to be true, but a more subtle and efficient algorithm is possible:
 
-Immediately, I began thinking this would require iterating over all possible patterns and looking for which one causes this condition to be true, but the actual method require is much simpler:
+Instead of looking for a reflection boundary that results in a valid reflection, we instead looking for a reflection boundary such that the *reflection is incorrect by exactly one*. This is a much simpler problem that iterating over all possible patterns.
 
-Instead of looking for a reflection boundary that results in a valid reflection, we are now looking for a reflection boundary such that the *reflection has exactly one issue*. This is a much simpler problem that iterating over all possible patterns.
-
-In fact, the only change required from part 1 is to change the final predicate for finding a _valid_ reflection boundary.
+In fact, the only change required from part 1 is to change the final predicate for finding a _valid_ reflection boundary from no errors to exactly one error.
 
 ## Improvements
 
@@ -50,4 +48,8 @@ Simple brute force. I don't think there are any particular algorithms for this t
 
 ### Software Engineering
 
-Reuse of code between parts one and two.
+The logic for checking rowwise and columnwise is identical, only requiring a tranpose on the input matrix to switch between each. This increases code reuse in my solution.
+
+The code for parts 1 and 2 is also reused. This was achieved by passing a predicate to the method that checks whether a reflection boundary produces a 'valid' reflection. This works as it is only the definition of a valid boundary that changes between part 1 and 2.
+
+I would consider changing the interface to my `Pattern` class so that instead of having `smudge: bool` as an argument, a function could be passed directly that would determine a 'valid' reflection. This would make the code much more general. But, I think for this problem, the way I have written it is adequate.
