@@ -1,10 +1,10 @@
 ---
-title: Fast & Slow Pointers
+title: Linked List
 description: INCOMPLETE
 layout: nested
 ---
 
-# Fast & Slow Pointers
+# Linked List
 
 Question: What is the middle value of this linked list?
 

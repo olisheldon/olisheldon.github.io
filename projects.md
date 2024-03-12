@@ -2,10 +2,8 @@
 layout: nested
 title: Projects
 navbaritem: true
-# files:
-#   - 'adventofcode23'
 subfolders:
-  - 'adventofcode23'
+  - 'advent_of_code23'
   - 'data_structures_and_algorithms'
-  - 'advanced_algorithms'
+  - 'advanced_data_structures_and_algorithms'
 ---

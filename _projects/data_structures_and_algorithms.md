@@ -11,6 +11,6 @@ files:
   - 'binary_tree'
 ---
 
-# Studying data structures and algorithms
+# Data Structures and Algorithms
 
 This page contains my data structures and algorithms notes.
