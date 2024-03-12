@@ -36,7 +36,7 @@ github_button:
 collections:
   landingpage:
     output: true
-  documentation:
-    output: true
+  # documentation:
+  #   output: true
   projects:
     output: true
