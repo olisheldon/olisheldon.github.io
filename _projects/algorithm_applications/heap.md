@@ -1,6 +1,6 @@
 ---
 title: Heap / Priority Queue
-description: INCOMPLETE
+description: Median Finding
 layout: nested
 ---
 
@@ -12,7 +12,7 @@ Inserting a new value into a sorted array is O(N), then indexing the middle elem
 
 This can be improved to an insertion complexity of O(logN), and indexing of median of O(1).
 
-## Implementation
+## Median Finding
 
 Maintain two heaps, one max and one min. Each heap contains half of the elements added so far (maximum difference in heap size of 1). Every value in the min heap should be less than or equal to every value in the max heap. Moving values between the heaps is permitted to maintain equality (within 1) of each heap's size.
 

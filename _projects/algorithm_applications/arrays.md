@@ -1,86 +1,50 @@
 ---
-title: Kadanes Algorithm
-description: Contiguous Subarray
+title: Arrays
+description: Two Pointers, Prefix Sum, Kadanes Algorithm, Sliding Windows
 layout: nested
 ---
 
-# Kadanes Algorithm
+# Arrays
 
-Properties:
- - Dynamic programming
- - Greedy algorithm
+## Two Pointers
 
-Question: Given an array of integers, what is the largest sum, non-empty contiguous subarray?
+### Palindrome Checking
 
-## Brute Force
-
-We can solve this simply with a brute force approach; iterating over all subarrays, calculating the sum for each and tracking the maximum sum.
+Question: Is an array a palindrome?
 
 ```python
-def brute_force(nums: list[int]) -> int:
-    max_sum = nums[0]
-
-    for i in range(len(nums)):
-        cur_sum = 0
-        for j in range(i, len(nums)):
-            cur_sum += nums[j]
-            max_sum = max(max_sum, cur_sum)
-    return max_sum
+def is_palindrome(word: str) -> bool:
+    l, r = 0, len(word) - 1
+    while l < r:
+        if word[l] != word[r]:
+            return False
+        l += 1
+        r -= 1
+    return True
 ```
+Time complexity: O(n)
 
-Time complexity: O(n^2)
+### Sum Checking
 
-## Kadanes Algorithm
-
-The approach taken in Kadanes algorithm iterates over the array once. For each num in the array, two values are updated:
-
- - cur_sum: The total sum of previous contiguous elements such that the sum was never negative or zero
- - max_sum: The maximum value of cur_sum
+Question: Given a sorted array of integers, what are the indices of two elements (in different positions) such that their sum is equal to the target? Assume there is exactly one solution.
 
 
 ```python
-def kadanes(nums: list[int]) -> int:
-    max_sum = nums[0]
-    cur_sum = 0
-
-    for n in nums:
-        cur_sum = max(cur_sum, 0)
-        cur_sum += n
-        max_sum = max(max_sum, cur_sum)
-    return max_sum
+def target_sum(nums: list[int], target: int) -> tuple[int, int]:
+    l, r = 0, len(nums) - 1
+    while l < r:
+        if nums[l] + nums[r] > target:
+            r -= 1
+        elif nums[l] + nums[r] < target:
+            l += 1
+        else:
+            return l, r
 ```
-
-This simple change changes the time complexity from brute force O(N**2) to O(N).
 
 Time complexity: O(n)
 
 
-
-## Sliding window variation of Kadanes: O(n)
-
-What if instead we wanted to return the left and right index of the maximum subarray sum, assuming there's exactly one result (no ties)?
-
-```python
-def sliding_window(nums: list[int]) -> tuple[int, int]:
-    max_sum = nums[0]
-    cur_sum = 0
-    max_L, max_R = 0, 0
-    L = 0
-
-    for R in range(len(nums)):
-        if cur_sum < 0:
-            cur_sum = 0
-            L = R
-
-        cur_sum += nums[R]
-        if cur_sum > max_sum:
-            max_sum = cur_sum
-            max_L, max_R = L, R 
-
-    return (max_L, max_R)
-```
-
-# Prefix Sum
+## Prefix Sum
 
 A prefix array is a contiguous subarray that includes the first element. 
 
@@ -114,11 +78,87 @@ Time complexity:
  - Query: O(1)
 
 
-# Fixed-Length Sliding Window
+## Kadanes Algorithm
+
+Properties:
+ - Dynamic programming
+ - Greedy algorithm
+
+Question: Given an array of integers, what is the largest sum, non-empty contiguous subarray?
+
+### Brute Force
+
+We can solve this simply with a brute force approach; iterating over all subarrays, calculating the sum for each and tracking the maximum sum.
+
+```python
+def brute_force(nums: list[int]) -> int:
+    max_sum = nums[0]
+
+    for i in range(len(nums)):
+        cur_sum = 0
+        for j in range(i, len(nums)):
+            cur_sum += nums[j]
+            max_sum = max(max_sum, cur_sum)
+    return max_sum
+```
+
+Time complexity: O(n^2)
+
+### Kadanes Algorithm
+
+The approach taken in Kadanes algorithm iterates over the array once. For each num in the array, two values are updated:
+
+ - cur_sum: The total sum of previous contiguous elements such that the sum was never negative or zero
+ - max_sum: The maximum value of cur_sum
+
+
+```python
+def kadanes(nums: list[int]) -> int:
+    max_sum = nums[0]
+    cur_sum = 0
+
+    for n in nums:
+        cur_sum = max(cur_sum, 0)
+        cur_sum += n
+        max_sum = max(max_sum, cur_sum)
+    return max_sum
+```
+
+This simple change changes the time complexity from brute force O(N**2) to O(N).
+
+Time complexity: O(n)
+
+
+
+### Sliding window variation of Kadanes: O(n)
+
+What if instead we wanted to return the left and right index of the maximum subarray sum, assuming there's exactly one result (no ties)?
+
+```python
+def sliding_window(nums: list[int]) -> tuple[int, int]:
+    max_sum = nums[0]
+    cur_sum = 0
+    max_L, max_R = 0, 0
+    L = 0
+
+    for R in range(len(nums)):
+        if cur_sum < 0:
+            cur_sum = 0
+            L = R
+
+        cur_sum += nums[R]
+        if cur_sum > max_sum:
+            max_sum = cur_sum
+            max_L, max_R = L, R 
+
+    return (max_L, max_R)
+```
+
+## Fixed-Length Sliding Window
 
 Question: Given an array of integer, are there two values with a contiguous subarray of size k that are equal?
 
-## Brute Force
+### Brute Force
 
 This can be solved in a brute-force manner:
 
@@ -132,7 +172,7 @@ def brute_force(nums: list[int], k: int) -> bool:
 ```
 Time complexity: O(N * k)
 
-## Fixed-Length Sliding Window Implementatino
+### Fixed-Length Sliding Window Implementatino
 
 ```python
 def sliding_window(nums: list[int], k: int) -> bool:
@@ -152,9 +192,9 @@ def sliding_window(nums: list[int], k: int) -> bool:
 
 Time complexity: O(n)
 
-# Variable-Length Sliding Window
+## Variable-Length Sliding Window
 
-## Example 1
+### Example 1
 
 Question: What is the length of the longest contiguous subarray such that all values within the subarray have the same value?
 
@@ -171,7 +211,7 @@ def longest_subarray(nums: list[int]) -> int:
 ```
 Time complexity: O(n)
 
-## Example 2
+### Example 2
 
 Question: What is the length of the shortest contiguous subarray such that the sum of the values within the subarray are greater than or equal to a given target integer? You can assume that all values are positive
 
@@ -187,43 +227,6 @@ def shortest_subarray(nums: list[int], target: int) -> int:
             total -= nums[l]
             l += 1
     return 0 if length == -1 else length
-```
-
-Time complexity: O(n)
-
-# Two Pointers
-
-## Palindrome Checking
-
-Question: Is an array a palindrome?
-
-```python
-def is_palindrome(word: str) -> bool:
-    l, r = 0, len(word) - 1
-    while l < r:
-        if word[l] != word[r]:
-            return False
-        l += 1
-        r -= 1
-    return True
-```
-Time complexity: O(n)
-
-## Sum Checking
-
-Question: Given a sorted array of integers, what are the indices of two elements (in different positions) such that their sum is equal to the target? Assume there is exactly one solution.
-
-
-```python
-def target_sum(nums: list[int], target: int) -> tuple[int, int]:
-    l, r = 0, len(nums) - 1
-    while l < r:
-        if nums[l] + nums[r] > target:
-            r -= 1
-        elif nums[l] + nums[r] < target:
-            l += 1
-        else:
-            return l, r
 ```
 
 Time complexity: O(n)

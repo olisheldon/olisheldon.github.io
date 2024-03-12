@@ -1,10 +1,12 @@
 ---
 title: Linked List
-description: INCOMPLETE
+description: Finding Middle, Contain Cycle, Finding Cycle
 layout: nested
 ---
 
 # Linked List
+
+## Finding Middle
 
 Question: What is the middle value of this linked list?
 
@@ -20,6 +22,7 @@ def middle_of_list(head: Node) -> Node:
 Time complexity: O(n)
 Memory complexity: O(1)
 
+## Contain Cycle
 
 Does the following linked list contain a cycle?
 ```python
@@ -36,6 +39,7 @@ def has_cycle(head: Node) -> bool:
 Time complexity: O(n)
 Memory complexity: O(1)
 
+## Finding Cycle
 
 Does the following linked list contain a cycle? If so return the beginning of the cycle, otherwise return None.
 ```python

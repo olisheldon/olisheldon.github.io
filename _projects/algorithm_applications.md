@@ -1,7 +1,7 @@
 ---
 layout: nested
 title: Applications of Data Structures and Algorithms
-description: Basic DSA
+description: Advanced DSA
 files:
   - 'arrays'
   - 'backtracking'
@@ -12,6 +12,6 @@ files:
   - 'trie'
 ---
 
-# Studying algorithms
+# Applications of Data Structures and Algorithms
 
-This page contains applications of data structures & algorithms
+This page contains applications of data structures & algorithms.
