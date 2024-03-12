@@ -1,6 +1,6 @@
 ---
 title: Kadanes Algorithm
-description: INCOMPLETE
+description: Contiguous Subarray
 layout: nested
 ---
 

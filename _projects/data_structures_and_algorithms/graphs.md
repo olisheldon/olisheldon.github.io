@@ -1,6 +1,6 @@
 ---
 title: Graphs
-description: INCOMPLETE - complete adjacency list/matrix and conversion
+description: Representations, DFS Traversal, BFS Traversal, Visualization, Backtracking, Shortest Path
 layout: nested
 ---
 
@@ -55,7 +55,7 @@ graph: dict[str, list[str]] = {"A" : [ ... ], "B" : [ ... ], ...}
 
 
 
-# Graph Traversal
+# Traversal
 
 Graphs are commonly traversed using depth-first search and breadth-first search. Very similar techniques to backtracking.
 

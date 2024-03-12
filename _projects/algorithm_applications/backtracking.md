@@ -1,6 +1,6 @@
 ---
 title: Backtracking
-description: INCOMPLETE
+description: Subsets, Combinations, Permutations
 layout: nested
 ---
 

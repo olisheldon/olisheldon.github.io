@@ -1,6 +1,6 @@
 ---
 title: Graphs
-description: INCOMPLETE
+description: Dijkstra's, Kruskal's (MST), Topological Sort
 layout: nested
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Trie (Prefix Tree)
-description: INCOMPLETE
+title: Trie
+description: Prefix Tree, Union-Find, Segment Tree, Iterative DFS
 layout: nested
 ---
 

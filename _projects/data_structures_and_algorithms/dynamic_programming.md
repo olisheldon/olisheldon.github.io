@@ -1,6 +1,6 @@
 ---
 title: Dynamic Programming
-description: INCOMPLETE
+description: 1D, 2D
 layout: nested
 ---
 

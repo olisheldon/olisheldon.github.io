@@ -1,6 +1,6 @@
 ---
 title: Binary Tree
-description: Lorem ipsum dolor sit amet
+description: Insert, Remove, Search, DFS, BFS, Heap
 layout: nested
 ---
 
@@ -148,7 +148,7 @@ class Node:
  ```
 
 
-# Depth-First Search
+# Breadth-First Search
 
 Not suited to recursion. We use a queue (FIFO) instead.
 
