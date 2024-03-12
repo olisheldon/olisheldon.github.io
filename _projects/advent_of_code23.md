@@ -62,6 +62,6 @@ The pages found below document my solutions to the 2023 Advent of Code puzzles. 
 | 20         |             |     x     |            |                |
 | 21         |             |     x     |            |                |
 | 22         |             |           |            |                |
-| 23         |             |           |            |                |
+| 23         |             |     x     |      x     |                |
 | 24         |             |     x     |            |                |
 | 25         |             |           |            |                |

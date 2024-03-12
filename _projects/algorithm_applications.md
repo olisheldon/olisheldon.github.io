@@ -1,15 +1,15 @@
 ---
 layout: nested
 title: Applications of Data Structures and Algorithms
-description: DSA
+description: Basic DSA
 files:
   - 'arrays'
   - 'backtracking'
-  - 'graphs'
-  - 'trie'
   - 'dynamic_programming'
+  - 'graphs'
   - 'heap'
   - 'linked_list'
+  - 'trie'
 ---
 
 # Studying algorithms

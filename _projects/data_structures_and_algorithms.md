@@ -3,12 +3,10 @@ layout: nested
 title: Data Structures and Algorithms
 description: DSA
 files:
-  - 'insertion_sort'
-  - 'merge_sort'
-  - 'quick_sort'
-  - 'bucket_sort'
-  - 'binary_search'
-  - 'binary_tree'
+  - 'arrays'
+  - 'dynamic_programming'
+  - 'graphs'
+  - 'trees'
 ---
 
 # Data Structures and Algorithms
