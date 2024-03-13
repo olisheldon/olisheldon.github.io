@@ -1,6 +1,6 @@
 ---
 layout: nested
-title: Documentation
+title: 
 navbaritem: true
 files:
   - 'templateconfig'
