@@ -3,4 +3,7 @@ layout: peptalk
 icon: work
 title: Experience
 ---
-My experience is ... . Look at my CV.
+
+Experienced Python and C++ Developer
+DevOps
+Agile
