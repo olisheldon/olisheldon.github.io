@@ -4,7 +4,9 @@ icon: work
 title: Experience
 ---
 
-Experienced Python and C++ Developer
+Python
+
+C++
 
 DevOps
 

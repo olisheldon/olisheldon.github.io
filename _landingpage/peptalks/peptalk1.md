@@ -4,16 +4,16 @@ icon: school
 title: Education
 ---
 
-### MSc Computer Science
+**MSc Computer Science**
 
-#### University of Warwick
+**University of Warwick**
 
-#### _Merit_
+**_Merit_**
 
 
 
-### BSc Theoretical Physics
+**BSc Theoretical Physics**
 
-#### Lancaster University
+**Lancaster University**
 
-#### _First-Class Honours_
+**_First-Class Honours_**
