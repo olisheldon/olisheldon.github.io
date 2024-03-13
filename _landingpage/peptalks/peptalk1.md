@@ -6,6 +6,7 @@ title: Education
 
 
 
+|               |
 | ------------- |
 |MSc Computer Science|
 |University of Warwick|
