@@ -1,7 +1,7 @@
 ---
 layout: nested
-title: 
-navbaritem: true
+title: Documentation
+navbaritem: false
 files:
   - 'templateconfig'
   - 'landingpage'
