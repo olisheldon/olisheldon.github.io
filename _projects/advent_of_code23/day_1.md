@@ -1,6 +1,6 @@
 ---
 title: "Day 1 : Trebuchet?!"
-description: String parsing <br/> <br/> <br/> Difficulty ★
+description: <br/> String parsing<br/> <br/> Difficulty ★
 layout: nested
 ---
 

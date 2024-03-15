@@ -1,6 +1,6 @@
 ---
 title: "Day 18: Lavaduct Lagoon"
-description: Polygon properties <br/> Mixin <br/> Difficulty ★★
+description: Polygon properties, Mixin <br/> Difficulty ★★
 layout: nested
 ---
 

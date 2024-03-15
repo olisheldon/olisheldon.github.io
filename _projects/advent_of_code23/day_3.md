@@ -1,6 +1,6 @@
 ---
 title: "Day 3: Gear Ratios"
-description: Grid parsing <br/> <br/> <br/> Difficulty ★
+description: <br/> Grid parsing <br/> <br/> Difficulty ★
 layout: nested
 ---
 

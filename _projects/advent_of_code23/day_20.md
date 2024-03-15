@@ -1,6 +1,6 @@
 ---
 title: "Day 20: Pulse Propagation"
-description: Graph with state <br/> <br/> <br/> Difficulty ★★★
+description: Graph with state <br/> Difficulty ★★★
 layout: nested
 ---
 

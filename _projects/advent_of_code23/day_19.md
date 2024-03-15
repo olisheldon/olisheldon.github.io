@@ -1,6 +1,6 @@
 ---
 title: "Day 19: Aplenty"
-description: Trees, intervals <br/> <br/> <br/> Difficulty ★★★
+description: <br/> Trees, intervals <br/> <br/> Difficulty ★★★
 layout: nested
 ---
 
