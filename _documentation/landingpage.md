@@ -32,7 +32,7 @@ button:
   url: https://github.com/Sandared/documentation_template
 title: Project Documentation Template
 subtitle: The Easy Way Towards Project Documentation
-version: 03.02.2024
+version: 03.02.2016
 ---
 ```
 
