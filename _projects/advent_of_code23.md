@@ -36,32 +36,32 @@ files:
 
 The pages found below document my solutions to the 2023 Advent of Code puzzles. These pages describe the problems, discuss my thought process, and explain ways that I will improve them in the future! The explanation will explain the style of solution that was used, how these map to common Leetcode-style problems, and visualizations of the solution where possible.
 
-## Completion
+## Index
 
-| Day        | Desciption  | Part 1    | Part 2     | Written Up     |
-|------------|-------------|-----------|------------|----------------|
-| 1          |             |     x     |      x     |       x        |
-| 2          |             |     x     |      x     |       x        |
-| 3          |             |     x     |      x     |       x        |
-| 4          |             |     x     |      x     |       x        |
-| 5          |             |     x     |      x     |       x        |
-| 6          |             |     x     |      x     |       x        |
-| 7          |             |     x     |      x     |       x        |
-| 8          |             |     x     |      x     |                |
-| 9          |             |     x     |      x     |       x        |
-| 10         |             |     x     |            |                |
-| 11         |             |     x     |      x     |       x        |
-| 12         |             |     x     |      x     |       x        |
-| 13         |             |     x     |      x     |       x        |
-| 14         |             |     x     |      x     |       x        |
-| 15         |             |     x     |      x     |       x        |
-| 16         |             |     x     |      x     |       x        |
-| 17         |             |     x     |      x     |       x        |
-| 18         |             |     x     |      x     |                |
-| 19         |             |     x     |      x     |                |
-| 20         |             |     x     |            |                |
-| 21         |             |     x     |            |                |
-| 22         |             |           |            |                |
-| 23         |             |     x     |      x     |                |
-| 24         |             |     x     |            |                |
-| 25         |             |           |            |                |
+| Day        | Description  | Part 1    | Part 2    | Written Up     |
+|------------|-------------|-----------|-----------|----------------|
+|     1      |             |     x     |     x     |       x        |
+|     2      |             |     x     |     x     |       x        |
+|     3      |             |     x     |     x     |       x        |
+|     4      |             |     x     |     x     |       x        |
+|     5      |             |     x     |     x     |       x        |
+|     6      |             |     x     |     x     |       x        |
+|     7      |             |     x     |     x     |       x        |
+|     8      |             |     x     |     x     |                |
+|     9      |             |     x     |     x     |       x        |
+|     10     |             |     x     |           |                |
+|     11     |             |     x     |     x     |       x        |
+|     12     |             |     x     |     x     |       x        |
+|     13     |             |     x     |     x     |       x        |
+|     14     |             |     x     |     x     |       x        |
+|     15     |             |     x     |     x     |       x        |
+|     16     |             |     x     |     x     |       x        |
+|     17     |             |     x     |     x     |       x        |
+|     18     |             |     x     |     x     |                |
+|     19     |             |     x     |     x     |                |
+|     20     |             |     x     |           |                |
+|     21     |             |     x     |           |                |
+|     22     |             |     x     |     x     |                |
+|     23     |             |     x     |     x     |                |
+|     24     |             |     x     |           |                |
+|     25     |             |           |           |                |

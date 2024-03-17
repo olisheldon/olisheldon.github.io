@@ -10,7 +10,7 @@ layout: nested
 
 [**input**](https://adventofcode.com/2023/day/10/input)
 
-[**my solution**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day10.py)
+[**my solution**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/day10.py)
 
 ## Description
 

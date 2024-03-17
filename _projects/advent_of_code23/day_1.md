@@ -10,7 +10,7 @@ layout: nested
 
 [**input**](https://adventofcode.com/2023/day/1/input)
 
-[**my solution**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/days/day1.py)
+[**my solution**](https://github.com/olisheldon/AdventOfCode23/blob/main/python/day1.py)
 
 ## Description
 
@@ -56,8 +56,8 @@ From a software quality perspective, my solution has been written in a way that 
 
 For example, if in an imaginary part 3 we were told that reversed digits ("eno", "owt", ...) were negative integers this could be implemented by adding a new Enum value to ParseType. The use of the ParseType enum class to handle this logic has separated concerns.
 
+## Solution
+
 <div class="aside">
-<h2>TEST</h2>
-<p>Some text, some text, some more text.</p>
 <iframe frameborder="0" scrolling="no" style="width:100%; height:653px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2FAgentBasedSystems-AI%2Fblob%2Fmain%2FREADME.md&style=default&type=markdown&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></iframe>
 </div>
