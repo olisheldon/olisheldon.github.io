@@ -57,11 +57,11 @@ The pages found below document my solutions to the 2023 Advent of Code puzzles. 
 |     15     |             |     x     |     x     |       x        |
 |     16     |             |     x     |     x     |       x        |
 |     17     |             |     x     |     x     |       x        |
-|     18     |             |     x     |     x     |                |
-|     19     |             |     x     |     x     |                |
+|     18     |             |     x     |     x     |       x        |
+|     19     |             |     x     |     x     |       x        |
 |     20     |             |     x     |           |                |
 |     21     |             |     x     |           |                |
-|     22     |             |     x     |     x     |                |
+|     22     |             |     x     |           |                |
 |     23     |             |     x     |     x     |                |
 |     24     |             |     x     |           |                |
 |     25     |             |           |           |                |
