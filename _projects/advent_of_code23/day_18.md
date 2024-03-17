@@ -20,29 +20,28 @@ For this problem, we must interpret a *dig plan*. The dig plan takes the form a 
  - Length (integer)
  - Colour (hexademical)
 
- A digger follows this dig plan, starting in 1m^3 hole, and proceeding to dig following the dig plan. Each instruction tells the differ to dig in a direction for a certain length. The dig plan is guaranteed to draw a closed shape.
+ A digger follows this dig plan, starting in a 1m^3 hole and proceeding to dig following the dig plan. Each instruction tells the digger to dig in a direction for a certain length. The dig plan is guaranteed to draw a closed shape.
 
 ## Part 1
 
-We follow the dig plan to draw the edge of a 2D polygon. After this is done, we proceed to dig out the interior. Finally, return the total area digged.
+We follow the dig plan to draw the edge of a 2D polygon. After this is done, we proceed to dig out the interior. Finally, we must return the total area digged.
 
-My solution to this uses *shoelace formula* and *Pick's theorem* to solve this.
+My solution to this uses *shoelace formula* and *Pick's theorem*.
 
-### Shoelace Formula
+### [Shoelace Formula](https://en.wikipedia.org/wiki/Shoelace_formula)
 
-Shoelace formula allows you to compute the area of a polygon given its integer coordinates.
+Shoelace formula allows you to compute the area of a polygon given its integer coordinates:
 
 ![Shoelace Formula](https://wikimedia.org/api/rest_v1/media/math/render/svg/b7d97cd80984bcfc229f3a100ba098db6311950c "Shoelace Formula")
 
-### Pick's Theorem
+### [Pick's Theorem](https://en.wikipedia.org/wiki/Pick%27s_theorem)
 
 Pick's Theorem allows you to find the area of a polygon with integer vertex coordinates as a function of the integer points within it and on its boundary.
 
 ![Pick's Theorem](https://wikimedia.org/api/rest_v1/media/math/render/svg/697592698c914435d23b1bae29e02dd14dfea9c7 "Pick's Theorem")
 
 
-Using these two theorem I solved the problem.
-
+Using these two theorem I solved the problem. This approach to the problem is nice as it is very simple to convert between the input (direction, number of step pairs) to a list of integer vertex coordinates that define a polygon that Shoelace formula and Pick's theorem can use.
 
 ## Part 2
 
@@ -53,7 +52,7 @@ The instructions are parsed from the hexademical colour values as follows:
  - The first five hexadecimal digits encode the distance in meters as a five-digit hexadecimal number
  - The last hexadecimal digit encodes the direction to dig: 0 means R, 1 means D, 2 means L, and 3 means U.
 
-This changes increases the size of the polygon by a large amount. Thankfully, the time complexity of my solution to part 1 is `O(N)`, where N is the number of instructions. Therefore, the same solution can be reused for part 2 with the same time complexity.
+This change increases the size of the polygon by a large amount. Thankfully, the time complexity of my solution to part 1 is `O(N)`, where N is the number of instructions. Therefore, the same solution can be reused for part 2 with the same time complexity.
 
 ## Improvements
 
@@ -61,9 +60,11 @@ I think my solutions to part 1 and 2 are optimal.
 
 ### Algorithms
 
+Shoelace formula and Pick's theorem are formulae that I have never come across before. They are very nice ways to approach problems that consider areas of Polygons.
+
 ### Software Engineering
 
-I like the way that I wrote my solution. As part 1 and part 2 differ in their conversion from `input -> list(Instruction(Direction, Steps))`, my Digger class contains a method `dig` that accepts these instructions on construction and returns the area dug out when called. 
+I like the way that I wrote my solution to this problem. As part 1 and part 2 differ only in their conversion from `input -> list[Instruction(Direction, Steps)]`, my Digger class contains a method `dig` that accepts these instructions on construction and returns the area dug out when called. 
 
 As such, I created a dataclass that is accepted by the Digger class
 
@@ -111,4 +112,4 @@ class ColourInstruction(ColourMixin, Instruction):
         self.direction = direction
 ```
 
-This resulted in very clean code for users of these classes.
+This resulted in very clean code for users of the Digger class.
