@@ -28,7 +28,7 @@ The following are the types of modules within the problem:
  - State: On / Off
  - Default state: Off
 
-'Flip-flop modules (prefix %) are either on or off; they are initially off. If a flip-flop module receives a high pulse, it is ignored and nothing happens. However, if a flip-flop module receives a low pulse, it flips between on and off. If it was off, it turns on and sends a high pulse. If it was on, it turns off and sends a low pulse.'
+`Flip-flop modules (prefix %) are either on or off; they are initially off. If a flip-flop module receives a high pulse, it is ignored and nothing happens. However, if a flip-flop module receives a low pulse, it flips between on and off. If it was off, it turns on and sends a high pulse. If it was on, it turns off and sends a low pulse.`
 (From AoC day 20 description)
 
 #### Conjunction
@@ -37,7 +37,7 @@ The following are the types of modules within the problem:
  - State: On / Off
  - Default state: Off
 
-Conjunction modules (prefix &) remember the type of the most recent pulse received from each of their connected input modules; they initially default to remembering a low pulse for each input. When a pulse is received, the conjunction module first updates its memory for that input. Then, if it remembers high pulses for all inputs, it sends a low pulse; otherwise, it sends a high pulse. 
+`Conjunction modules (prefix &) remember the type of the most recent pulse received from each of their connected input modules; they initially default to remembering a low pulse for each input. When a pulse is received, the conjunction module first updates its memory for that input. Then, if it remembers high pulses for all inputs, it sends a low pulse; otherwise, it sends a high pulse.`
 (From AoC day 20 description)
 
 #### Starter modules
@@ -46,7 +46,7 @@ There is a single broadcast module (named broadcaster). When it receives a pulse
 
 ### Processing Order
 
-It it the case that pulses are always processed in the order they are sent. So, if for example a pulse is sent to modules `a` and `b`, then module `a` processes its pulse and sends more pulses. But, before these new pulses are processed the pulse sent to `b` must be processed first.
+It is the case that pulses are always processed in the order that they are sent. So, if for example a pulse is sent to modules `a` and `b`, then module `a` processes its pulse and sends more pulses. But, before these new pulses are processed the pulse sent to `b` must be processed first.
 
 This means the pulses are pushed to a queue, and pulses are processed from the front of the queue. This is a first-in-first-out (FIFO) data structure.
 
@@ -90,12 +90,29 @@ At this point within the Advent of Code, the solution to this problem is not goi
 I have not yet completed this part of Day 20's challenge, but I do have a few ideas that I will pursue to solve it:
 
  - The easiest solution would be manual analysis. This analysis would require looking at the modules that contain rx as a destination and analysing these. In the end, the solution is very likely to take the form of finding looping states that create the message I am looking for.
- - Consider grouping together multiple nodes to reduce the size of the graph. This will make the analysis easier. This will involves analysing subgraphs such as FlipFlop->FlipFlop, Conjunction->Conjunction, FlipFlop->Conjunction and so on. I think through this the problem can be made more simple.
- - 
+ - Consider grouping together multiple nodes to reduce the size of the graph. This will make the analysis easier. This will involves analysing subgraphs such as FlipFlop->FlipFlop, Conjunction->Conjunction, FlipFlop->Conjunction and so on. I think through this the problem can be made more simple. 
+ - Find an approach that automatically finds cycles within the graph, and uses these to compute the answer after a number of iterations.
 
 ## Improvements
 
 ### Part 1
+
+I think my solution is quite bloated with the number of classes to model this system. However, this does make debugging very nice; For example, my `Message` class can perfectly replicate the Message logging presented on the Advent of Code website
+
+```
+button -low-> broadcaster
+broadcaster -low-> a
+broadcaster -low-> b
+broadcaster -low-> c
+a -high-> b
+b -high-> c
+c -high-> inv
+inv -low-> a
+a -low-> b
+b -low-> c
+c -low-> inv
+inv -high-> a
+```
 
 ### Part 2
 
@@ -103,6 +120,4 @@ I have not yet completed this part of Day 20's challenge, but I do have a few id
 
 ### Software Engineering
 
-#### Part 1
-
-Each module has a basic function of accepting a message and returning new messages. To create this generic interface of handling messages, I created ana abstract base class for modules (ModuleBase), which defined an interface for all modules within the motherboard to use. 
+Each module has a basic function of accepting a message and returning new messages. To create this generic interface of handling messages, I created ana abstract base class for the modules (ModuleBase), which defined an interface for all modules within the motherboard to use. This use of an abstract base class also prevented code duplication, an example of this is the `__repr__` for each module.
