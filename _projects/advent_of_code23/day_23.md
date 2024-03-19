@@ -1,6 +1,6 @@
 ---
 title: Day 23
-description: DAG Traversal <br/> Difficulty ★★★
+description: DAG / Graph Traversal <br/> Difficulty ★★★
 layout: nested
 ---
 
@@ -14,9 +14,9 @@ layout: nested
 
 ## Description
 
-Day 23 presents a hike through a 2D grid representing hiking trails through a forest. We start at the top-left of the grid, and exit at the bottom-right of the grid. As well as path tiles through the forest, some path tiles slopes so that the next step must be downhill. We are also told that the ground is icy, so much so that a slope tile can only be traversed in one direction (the direciton at the tip of the '>' character).
+Day 23 presents a hike through a 2D grid representing hiking trails through a forest. We start at the top-left of the grid, and exit at the bottom-right. Some of the path tiles through the forest are sloped, such that they can only be traversed in one direction (the traversable direction is shown through the orientation of a '>').
 
-Example:
+### Test Case
 
 ```
 #.#####################
@@ -44,15 +44,75 @@ Example:
 #####################.#
 ```
 
+
+### Longest Path
+
+Unlike shortest path, there is no efficient algorithm to improve from polynomial (is this correct?) time complexity. 
+
 ## Part 1
 
-For part 1, we must find the optimal path from the start to the exit of this hiking trail while also under the constraint of haivng the most scenic hike (longest path while never stepping on the same tile twice). 
+For part 1, we are asked to find a optimal path from the start to the exit under the constraint of having the most scenic hike (longest path while never stepping on the same tile twice). This means finding the longest traversal through the grpah without any cycles.
+
+A noteworthy feature of our grid is that all paths are only one tile wild. As we can not go back on ourselves due to our traversal constraint, many of the tiles require no decisions so should not be considered in our longest-path algorithm. Therefore this problem can be massively simplified by performing edge contraction.
+
+### Edge Contraction
+
+In edge contraction, we ignore edges on our graph that require no decision thereby decreasing the number of nodes within the graph. 
+
+If we take a subgrid from our example, we can see how edge contraction can be used to create an adjacency list that perfectly captures the graph in a much more concise way:
+
+```
+#.#######    #1#######
+#.......#    #.......#
+#######.#    #######.#
+###.....#    ###.....#
+###v#####    ###v#####           
+###.>...#    ###2>...#           -->- ...
+###v###.#    ###v###.#          /  
+###...#.# -> ###...#.# -> 1 ->- 2       ...
+#####.#.#    #####.#.#          \      /
+#.....#.#    #.....#.#           -->- 3
+#.#####.#    #.#####.#                 \
+#.#...#..    #.#...#..                  ...
+#.#.#v###    #.#.#v###
+#...#.>.#    #...#3>.#
+#####v#.#    #####v#4#
+```
+
+In my code, this adjacency list is stored as nested dictionaries
+
+```python
+dict(Coord(i=0, j=1): 
+                     {Coord(i=5, j=3) : 15},
+                      Coord(i=5, j=3) : {Coord(i=13, j=5): 22},
+                      Coord(i=13, j=5): {Coord(i=14, j=7): 3})
+```
+where `Coord(i=0, j=1)` is point 1, `Coord(i=5, j=3)` is point 2, `Coord(i=13, j=5)` is point 3, and `Coord(i=14, j=7)` is point 4. Nested within the dictionary we also store the number of 
+
+### Creating the adjacency list
+
+This requires first finding these decision points. I created this by iterating through all grid tiles, and if a grid tile had more than two neighbours it was a decision point and should be added to a list of coordinates for further processing.
+
+Once the list of decision points is found, the construction of the adjacency list can begin. For each decision point, we get a dictionary that tells us for each neighbour how far away the point is. We only connect neighbours that are directly adjacent as this would violate our no backtracking constraint. To prevent this problem, for each decision point with BFS outwards and stop propagating when we reach the next neighbours. This will prevent us from backtracking. 
+
+The graph encoded through the adjacency list is directed because as we look for neighbouring points, we stop traversing a root if we try to move up a slope. 
+
+To create the adjacency list we use DFS using a stack. We could also us BFS using a queue. Traversing through the tiles in our graph starting from each decision point, we add the point to our adjacency list if the tile we have traversed to is a decision point and not the starting point. If this is not the case, we add the tile to the set of visited tiles, and append the next possible immediate tiles from this coordinate that we can validly step to. Once the stack is empty, we start the iteration again at the next decision point.
+
+Once the decision points have been iterated over, we have successfully constructed our complete adjacency list, and we can DFS to find the longest path.
+
+### DFS
+
+Negative infinity because this means that all edges going out from an edge, if they all can not find the exit you get negative infinity. Any paths that do not lead to an exit get their distance dominated by the negative infinity term. Therefore, they will always be beaten by valid paths. This would not be the case if we set it to zero.
 
 ## Part 2
 
+In part 2, we are now told to treat the slopes as regular path tiles. This increases the size of the problem tremendously. 
 
 
 ## Improvements
+
+Apparently topological sorting can be used to solve in linear time. Look into this
 
 ### Part 1
 
@@ -60,4 +120,8 @@ For part 1, we must find the optimal path from the start to the exit of this hik
 
 ### Algorithms
 
+Could be a lot more efficient, part 2 is brute forced and takes ~30 seconds to run.
+
 ### Software Engineering
+
+My DFS through the 

@@ -14,7 +14,7 @@ layout: nested
 
 ## Description
 
-We are provided with a snapshot a system of hailstones positions and velocities. Asssuming the hailstones move in a perfectly linear motion, find how many of the hailstones **paths** will intersect with a test area.
+In this problem, we are provided with a snapshot a system of hailstones positions and velocities. Asssuming the hailstones move in a perfectly linear motion, we must count how many of the hailstones **paths** will intersect within a test area.
 
 ## Part 1
 
@@ -26,9 +26,19 @@ The hailstones can be represented as lines. This means that they can be represen
 ax + by = c
 ```
 
-Our first task is to convert each hailstone to this form, and then model our system as a system of lines and apply the correct algebraic formulae.
+Our first task is to convert each hailstone to this form, and then model our system as a system of lines and apply the correct algebraic formulae. Then, checking that:
+
+ * There is a collision
+ * The collision occurs in the test area
+ * It does not happen in negative time (the past)
+
+If all of these are true, these pair of hailstones should be counted.
 
 ## Part 2
+
+For part 2, we are asked to find a position and velocity such that this new hailstone collides with every hailstone.
+
+I do not know how to approach this problem.
 
 ## Improvements
 
@@ -37,5 +47,7 @@ Our first task is to convert each hailstone to this form, and then model our sys
 ### Part 2
 
 ### Algorithms
+
+Basic algebra for part 1.
 
 ### Software Engineering
