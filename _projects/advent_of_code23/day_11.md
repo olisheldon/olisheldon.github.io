@@ -54,3 +54,8 @@ My solution has time complexity `O(N**2)`, but I believe this is ideal; The impr
 ### Software Engineering
 
 My solution to part 1 and part 2 use the same logic. This is a sign of a nicely written solution.
+
+## Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="no" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2FAdventOfCode23%2Fblob%2Fmain%2Fday11.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>

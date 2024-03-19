@@ -96,3 +96,8 @@ This problems seems like it is solvable using dynamic programming. This would no
 ### Software Engineering
 
 I made sure to implement my recursion on tuple representations of the springs and configuration subproblems to avoid Pythonic issues of passing mutable containers to functions. I think my code is well structured as minimal code changes were needed to solve part 2, and the code changes did not require changing the method calls for solving part 1.
+
+## Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="no" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2FAdventOfCode23%2Fblob%2Fmain%2Fday12.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>

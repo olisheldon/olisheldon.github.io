@@ -52,3 +52,8 @@ Overall, I think the general time complexity is as good as it can get. The const
 As the only difference between part 1 and 2 was the predicate used for determining if the new crucible state was valid, I added passing this predicate to the method contain Dijkstras Algorithm. The other choice was to hard code each implementation.
 
 I prefer the runtime variation because it allows users to choose the predicate they want, and results in no repeated code within the graphs implementation.
+
+## Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="no" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2FAdventOfCode23%2Fblob%2Fmain%2Fday17.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>

@@ -62,3 +62,8 @@ My only issue with part 2 of this problem was my choice to implement the boxes a
 ### Software Engineering
 
 It was nice to use an abstract base class to define an interface for the instructions. This resulted in nice, readable code.
+
+## Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="no" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2FAdventOfCode23%2Fblob%2Fmain%2Fday15.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>

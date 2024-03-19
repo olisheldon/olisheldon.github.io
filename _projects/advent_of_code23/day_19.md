@@ -79,3 +79,9 @@ The answer is no, because we are never considering a list of intervals, only a s
 Throughout writing my solution, I found my code suffering from 'drilling' as many of the classes I created to solve this problem just pass the work further down the chain until the class at the bottom finally handles it. I tried to rewrite my solution to prevent this, but I think I was only partly successful in this.
 
 The classes I created are too dependent on each other. For example, the Operator enum class I created for handling the '<' and '>' logic has a method that has direct knowledge of the Interval interface. This felt natural for writing this code, but I am not sure of the best way to remedy this.
+
+
+## Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="no" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2FAdventOfCode23%2Fblob%2Fmain%2Fday19.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>

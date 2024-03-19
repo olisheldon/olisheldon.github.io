@@ -53,3 +53,8 @@ The logic for checking rowwise and columnwise is identical, only requiring a tra
 The code for parts 1 and 2 is also reused. This was achieved by passing a predicate to the method that checks whether a reflection boundary produces a 'valid' reflection. This works as it is only the definition of a valid boundary that changes between part 1 and 2.
 
 I would consider changing the interface to my `Pattern` class so that instead of having `smudge: bool` as an argument, a function could be passed directly that would determine a 'valid' reflection. This would make the code much more general. But, I think for this problem, the way I have written it is adequate.
+
+## Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="no" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2FAdventOfCode23%2Fblob%2Fmain%2Fday13.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>

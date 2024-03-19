@@ -152,3 +152,8 @@ With this, we can see that this optimization does have a significant affect on t
 I found a very nice Python feature:
 
 Instead of writing `lower <= x < upper` to test if a value is within an interval/range, you can instead write `x in range(lower, upper)`. In this example, Python utilizes the generator-nature of the range object to perform a check within the range without calling for the memory required to create a list [lower, ..., upper - 1].
+
+## Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="no" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2FAdventOfCode23%2Fblob%2Fmain%2Fday5.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>

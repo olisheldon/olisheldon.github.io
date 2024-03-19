@@ -54,3 +54,8 @@ The time complexity of my solution is linear O(N) where N is the number of chara
 ### Software Engineering
 
 The part_1() and part_2() (outside of the problems classes) methods contain too much logic. These should be pulled out into an 'Engine Schematic' class. However, the problem is not complex enough to warrant this.
+
+## Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="no" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2FAdventOfCode23%2Fblob%2Fmain%2Fday3.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>

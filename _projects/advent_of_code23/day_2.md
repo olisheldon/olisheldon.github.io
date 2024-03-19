@@ -36,3 +36,8 @@ There are no improvements possible for the time complexity of this problem.
 ### Software Engineering
 
 I used a dictionary to map each dice bag's colour and count pair. This implementation detail was hidden from users by wrapping the dictionary in a class (DiceBag). This means that, in the future, if it was decided that there is a better data structure for this problem than a dictionary changes can be made without affecting the interface/functionality seen by users of the code.
+
+## Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="no" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2FAdventOfCode23%2Fblob%2Fmain%2Fday2.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>

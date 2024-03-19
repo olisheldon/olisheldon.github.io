@@ -55,3 +55,9 @@ I represented the problem as a directed graph. Because the instructions are hard
  - `NodesBase` should be an abstract base class. There should never be a need to instantiate this class.
 
 Overall, it is not very good code. Although it produces the correct answer, it could be written in a much nicer way that is easier to understand, more maintainable, and has a simpler interface to users.
+
+
+## Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="no" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2FAdventOfCode23%2Fblob%2Fmain%2Fday8.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>

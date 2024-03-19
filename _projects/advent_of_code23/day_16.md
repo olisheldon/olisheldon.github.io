@@ -65,3 +65,9 @@ I implemented laser states as having a coordinate and a direction, where the coo
 The logic surrounding the grid tiles and new laser states could be massively simplfied by instead storing a laser states direction as the 2D Cartesian directions, i.e. NORTH=(-1, 0), EAST=(0, 1), SOUTH=(1, 0), or WEST=Coord(0, -1). 
 
 I chose not to do this as this implies a laser could have a direction in any 2D direction but this is not true.
+
+
+## Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="no" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2FAdventOfCode23%2Fblob%2Fmain%2Fday16.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>
