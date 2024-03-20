@@ -47,13 +47,13 @@ Day 23 presents a hike through a 2D grid representing hiking trails through a fo
 
 ### Longest Path
 
-Unlike shortest path, there is no efficient algorithm to improve from polynomial (is this correct?) time complexity. 
+Unlike shortest path, there is no efficient algorithm for finding the longest path. This makes any optimization to our graph paramount. 
 
 ## Part 1
 
-For part 1, we are asked to find a optimal path from the start to the exit under the constraint of having the most scenic hike (longest path while never stepping on the same tile twice). This means finding the longest traversal through the grpah without any cycles.
+For part 1, we are asked to find an optimal path from the start to the exit under the constraint of having the most scenic hike (longest path while never stepping on the same tile twice). This means finding the longest traversal through the grpah without any cycles.
 
-A noteworthy feature of our grid is that all paths are only one tile wild. As we can not go back on ourselves due to our traversal constraint, many of the tiles require no decisions so should not be considered in our longest-path algorithm. Therefore this problem can be massively simplified by performing edge contraction.
+A noteworthy feature of our grid is that all paths are only one tile wide. As we can not go back on ourselves due to our scenic-hike constraint, many of the tiles require no decisions so should not be considered in our longest-path algorithm. Therefore this problem can be massively simplified by performing edge contraction.
 
 ### Edge Contraction
 
@@ -91,40 +91,40 @@ where `Coord(i=0, j=1)` is point 1, `Coord(i=5, j=3)` is point 2, `Coord(i=13, j
 
 ### Creating the adjacency list
 
-This requires first finding these decision points. I created this by iterating through all grid tiles, and if a grid tile had more than two neighbours it was a decision point and should be added to a list of coordinates for further processing.
+This requires first finding these decision points. I created this by iterating through all grid tiles, and if a grid tile had more than two neighbours it was declared a decision point and should therefore be added to a list of coordinates for further processing.
 
-Once the list of decision points is found, the construction of the adjacency list can begin. For each decision point, we get a dictionary that tells us for each neighbour how far away the point is. We only connect neighbours that are directly adjacent as this would violate our no backtracking constraint. To prevent this problem, for each decision point with BFS outwards and stop propagating when we reach the next neighbours. This will prevent us from backtracking. 
+Once the list of decision points is found, the construction of the adjacency list can begin. For each decision point, we get a dictionary that tells us for each neighbour how far away the point is. We only connect neighbours that are directly adjacent as this would violate our no backtracking constraint. To prevent this problem, for each decision point we breadth-first search outwards and stop propagating when we reach the next neighbours. This prevents us from backtracking. 
 
 The graph encoded through the adjacency list is directed because as we look for neighbouring points, we stop traversing a root if we try to move up a slope. 
 
-To create the adjacency list we use DFS using a stack. We could also us BFS using a queue. Traversing through the tiles in our graph starting from each decision point, we add the point to our adjacency list if the tile we have traversed to is a decision point and not the starting point. If this is not the case, we add the tile to the set of visited tiles, and append the next possible immediate tiles from this coordinate that we can validly step to. Once the stack is empty, we start the iteration again at the next decision point.
+To create the adjacency list we use DFS using a stack. We could alternatively use BFS with a queue. Traversing through the tiles in our graph starting from each decision point, we add the point to our adjacency list if the tile we have traversed to is a decision point and not the starting point. If this is not the case, we add the tile to the set of visited tiles, and append the next possible immediate tiles from this coordinate that we can validly step to. Once the stack is empty, we start the iteration again at the next decision point.
 
 Once the decision points have been iterated over, we have successfully constructed our complete adjacency list, and we can DFS to find the longest path.
 
-### DFS
+### Depth-First Search
 
-Negative infinity because this means that all edges going out from an edge, if they all can not find the exit you get negative infinity. Any paths that do not lead to an exit get their distance dominated by the negative infinity term. Therefore, they will always be beaten by valid paths. This would not be the case if we set it to zero.
+To find the longest path, we use depth-first search from the starting tile. Negative infinity is used as the starting distance because this means that if an edge can not find an exit through any route it will have a distance of negative infinity. This propagates as any paths that do not lead to an exit get their distance dominated by the negative infinity term. Therefore, **any** valid path will beat a shorter path that can never find an exit. This would not be the case if we set it to zero.
 
 ## Part 2
 
-In part 2, we are now told to treat the slopes as regular path tiles. This increases the size of the problem tremendously. 
+In part 2, we are now told to treat the slopes as regular path tiles. This increases the size of the problem tremendously.
 
+Because of the way that my solution to part 1 is written, this change is very easy. It only requires reinterpreting the input slope tiles as regular path tiles and re-running the algorithm. Though not optimal, this finds the most scenic path in a reasonable amount of time (~1 minute).
 
 ## Improvements
 
-Apparently topological sorting can be used to solve in linear time. Look into this
 
 ### Part 1
 
 ### Part 2
 
+Topological sort could be used to solve part 2 in linear time. I will need to read more about topological sort before doing this.
+
 ### Algorithms
 
-Could be a lot more efficient, part 2 is brute forced and takes ~30 seconds to run.
+I think overall my code is a nice solution to this problem.
 
 ### Software Engineering
-
-My DFS through the 
 
 ## Solution
 
