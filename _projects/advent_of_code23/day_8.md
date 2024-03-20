@@ -18,11 +18,11 @@ This problem contains a list of instructions and nodes. Each node is labelled wi
 
 The list of instructions are a series of individual left or right instructions, deciding the next node to visit. The instructions never terminate, but instead cycle continuously. The traversal through the graph terminates at node 'ZZZ'.
 
-This is a graph problem following a pre-defined path.
+This is a graph problem that must be traversed via a pre-defined path.
 
 ## Part 1
 
-Part 1 requires us to traverse the graph starting from 'AAA' until we the terminating node is reached. The number of instructions required to terminate should be returned.
+Part 1 requires us to traverse the graph starting from 'AAA' until the terminating node is reached. The number of instructions required to terminate should be returned.
 
 In my solution, it seemed natural to represent the map as a directed graph with each vertex connected to two other vertices. From here, the answer can be found by iteration; We move through the graph until an 'ending node' is reached while keeping a counter for the number of instructions used.
 
@@ -32,7 +32,7 @@ In part 2, we are instead told to reinterpret which nodes are entry nodes and ex
 
 This problem is now far too large to brute force, and we must consider numerical ways to solve it. 
 
-I considered each entry node separately, tracking the number of instructions it took for each entry node to reach its first ending node. Once all routes had been processed, I found the prime factors of each of these numbers. The answer can then be found by taking the product over the unique prime factors.
+I considered each entry node separately, tracking the *minimum number of instructions* it took for each entry node to reach its first ending node. Once all routes had been processed, I found the prime factors of each of these *minimum number of instructions*. The answer can then be found by taking the product over the unique prime factors.
 
 ## Improvements
 
@@ -54,7 +54,7 @@ I represented the problem as a directed graph. Because the instructions are hard
  - `SimultaneousNodes` could reuse code for part 1, but it doesn't.
  - `NodesBase` should be an abstract base class. There should never be a need to instantiate this class.
 
-Overall, it is not very good code. Although it produces the correct answer, it could be written in a much nicer way that is easier to understand, more maintainable, and has a simpler interface to users.
+Overall, it is not very good code. Although it produces the correct answer, it could be written in a much nicer way that is easier to understand, more maintainable, and has a simpler interface for users.
 
 
 ## Solution

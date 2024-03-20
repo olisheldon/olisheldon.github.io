@@ -47,7 +47,7 @@ The pages found below document my solutions to the 2023 Advent of Code puzzles. 
 |     5      |             |     x     |     x     |       x        |
 |     6      |             |     x     |     x     |       x        |
 |     7      |             |     x     |     x     |       x        |
-|     8      |             |     x     |     x     |                |
+|     8      |             |     x     |     x     |       x        |
 |     9      |             |     x     |     x     |       x        |
 |     10     |             |     x     |           |                |
 |     11     |             |     x     |     x     |       x        |
@@ -64,4 +64,4 @@ The pages found below document my solutions to the 2023 Advent of Code puzzles. 
 |     22     |             |     x     |     x     |       x        |
 |     23     |             |     x     |     x     |       x        |
 |     24     |             |     x     |           |       x        |
-|     25     |             |           |           |                |
+|     25     |             |           |           |       x        |
