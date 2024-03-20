@@ -36,32 +36,32 @@ files:
 
 The pages found below document my solutions to the 2023 Advent of Code puzzles. These pages describe the problems, discuss my thought process, and explain ways that I will improve them in the future! The explanation will explain the style of solution that was used, how these map to common Leetcode-style problems, and visualizations of the solution where possible.
 
-[comment]: <> ## Index
+[comment]: <> ( ## Index) 
 
-[comment]: <> | Day        | Description  | Part 1    | Part 2    | Written Up     |
-[comment]: <> |------------|-------------|-----------|-----------|----------------|
-[comment]: <> |     1      |             |     x     |     x     |       x        |
-[comment]: <> |     2      |             |     x     |     x     |       x        |
-[comment]: <> |     3      |             |     x     |     x     |       x        |
-[comment]: <> |     4      |             |     x     |     x     |       x        |
-[comment]: <> |     5      |             |     x     |     x     |       x        |
-[comment]: <> |     6      |             |     x     |     x     |       x        |
-[comment]: <> |     7      |             |     x     |     x     |       x        |
-[comment]: <> |     8      |             |     x     |     x     |       x        |
-[comment]: <> |     9      |             |     x     |     x     |       x        |
-[comment]: <> |     10     |             |     x     |           |                |
-[comment]: <> |     11     |             |     x     |     x     |       x        |
-[comment]: <> |     12     |             |     x     |     x     |       x        |
-[comment]: <> |     13     |             |     x     |     x     |       x        |
-[comment]: <> |     14     |             |     x     |     x     |       x        |
-[comment]: <> |     15     |             |     x     |     x     |       x        |
-[comment]: <> |     16     |             |     x     |     x     |       x        |
-[comment]: <> |     17     |             |     x     |     x     |       x        |
-[comment]: <> |     18     |             |     x     |     x     |       x        |
-[comment]: <> |     19     |             |     x     |     x     |       x        |
-[comment]: <> |     20     |             |     x     |           |       x        |
-[comment]: <> |     21     |             |     x     |           |       x        |
-[comment]: <> |     22     |             |     x     |     x     |       x        |
-[comment]: <> |     23     |             |     x     |     x     |       x        |
-[comment]: <> |     24     |             |     x     |           |       x        |
-[comment]: <> |     25     |             |           |           |       x        |
+[comment]: <> (| Day        | Description  | Part 1    | Part 2    | Written Up     |)
+[comment]: <> (|------------|-------------|-----------|-----------|----------------|)
+[comment]: <> (|     1      |             |     x     |     x     |       x        |)
+[comment]: <> (|     2      |             |     x     |     x     |       x        |)
+[comment]: <> (|     3      |             |     x     |     x     |       x        |)
+[comment]: <> (|     4      |             |     x     |     x     |       x        |)
+[comment]: <> (|     5      |             |     x     |     x     |       x        |)
+[comment]: <> (|     6      |             |     x     |     x     |       x        |)
+[comment]: <> (|     7      |             |     x     |     x     |       x        |)
+[comment]: <> (|     8      |             |     x     |     x     |       x        |)
+[comment]: <> (|     9      |             |     x     |     x     |       x        |)
+[comment]: <> (|     10     |             |     x     |           |                |)
+[comment]: <> (|     11     |             |     x     |     x     |       x        |)
+[comment]: <> (|     12     |             |     x     |     x     |       x        |)
+[comment]: <> (|     13     |             |     x     |     x     |       x        |)
+[comment]: <> (|     14     |             |     x     |     x     |       x        |)
+[comment]: <> (|     15     |             |     x     |     x     |       x        |)
+[comment]: <> (|     16     |             |     x     |     x     |       x        |)
+[comment]: <> (|     17     |             |     x     |     x     |       x        |)
+[comment]: <> (|     18     |             |     x     |     x     |       x        |)
+[comment]: <> (|     19     |             |     x     |     x     |       x        |)
+[comment]: <> (|     20     |             |     x     |           |       x        |)
+[comment]: <> (|     21     |             |     x     |           |       x        |)
+[comment]: <> (|     22     |             |     x     |     x     |       x        |)
+[comment]: <> (|     23     |             |     x     |     x     |       x        |)
+[comment]: <> (|     24     |             |     x     |           |       x        |)
+[comment]: <> (|     25     |             |           |           |       x        |)
