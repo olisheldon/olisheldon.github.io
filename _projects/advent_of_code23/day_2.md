@@ -14,11 +14,11 @@ layout: nested
 
 ## Description
 
-This problem requires asserting whether pulling a number of coloured cubes from a bag, then replacing and repeating, is possible. We know beforehand the number of cubes of each colour in the bag.
+This problem requires asserting whether pulling a number of coloured cubes from a bag, then replacing and repeating, is possible. The number of cubes of each colour in the bag is known.
 
 ## Part 1
 
-This problem is a simple logic problem.
+This problem is a simple logic problem with the majority of the difficult coming from correctly parsing the input.
 
 ## Part 2
 

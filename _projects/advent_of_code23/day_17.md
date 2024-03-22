@@ -23,10 +23,10 @@ Our job is to find the path from the top-left square to the bottom-right square 
 
 ## Part 1
 
-This is path finding through a grid, minmizing the cost of this path. This is a classic problem that can be solved with Dijkstra's Algorithm [**link**](). It is possible to use simple breadth-first search to solve, but it will take an unfeasibly long amount of time to solve.
+This is path finding through a grid, while minmizing the cost of this path. This is a classic problem that can be solved with [**Dijkstra's Algorithm**](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm). It is possible to use simple breadth-first search to solve, but it will take an unfeasibly long amount of time to solve.
 
 
-Dijkstras Algorithm speeds up breadth-first search by replacing the queue of nodes to visit with a priority queue. This means that we will always look at the next node that is the most promising candidate for minimizing the cost. 
+Dijkstras Algorithm speeds up breadth-first search by replacing the queue of nodes to visit with a priority queue. This means that we will always look at the next node that is the most promising candidate for minimizing the cost. This works as we will always find the lowest-cost path first, so can return on the first path to find the exit.
 
 ## Part 2
 
@@ -39,19 +39,21 @@ This amounts to a change in considering whether the next state we are evaluating
 
 ## Improvements
 
-### Part 1
+<!-- ### Part 1 -->
 
-Overall, I think the general time complexity is as good as it can get. The constants within the time complexity could be possibly improved by being more careful in the new directions we consider, but this would make a negligible difference.
+Overall, I think the general time complexity for both solutions is as good as it can get. The constants within the time complexity could be possibly improved by being more careful in the new directions we consider, but this would make a negligible difference.
 
-### Part 2
+<!-- ### Part 2 -->
 
 ### Algorithms
+
+A nice, classic application of Dijkstra's algorithm to a problem.
 
 ### Software Engineering
 
 As the only difference between part 1 and 2 was the predicate used for determining if the new crucible state was valid, I added passing this predicate to the method contain Dijkstras Algorithm. The other choice was to hard code each implementation.
 
-I prefer the runtime variation because it allows users to choose the predicate they want, and results in no repeated code within the graphs implementation.
+I prefer the runtime variation because it allows users to choose the predicate they want, and results in no repeated code within the graphs implementation of Dijkstra's algorithm.
 
 ## Solution
 

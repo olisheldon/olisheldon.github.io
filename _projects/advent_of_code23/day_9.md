@@ -46,7 +46,7 @@ def extrapolate(subhistory: list[int]) -> int:
 
 ## Part 2
 
-Part 2 asks us to instead extrapolate to the left hand side. We must again return the summ these extrapolated values.
+Part 2 asks us to instead extrapolate to the left hand side. We must again return the sum of these extrapolated values.
 
 It was very simple to modify part 1 to achieve this:
 
@@ -65,7 +65,7 @@ def extrapolate(subhistory: list[int], forwards: bool = True) -> int:
 
 ## Improvements
 
-My solution using recursion is a nice solution to the problem, but in way optimal in time or space complexity.
+My solution using recursion is a nice solution to the problem, but is in no way optimal in time or space complexity.
 
 I am sure that this problem has a constant time solution, but will be
 
@@ -74,9 +74,7 @@ I am sure that this problem has a constant time solution, but will be
 
 ### Algorithms
 
-Use of recursion makes solution very concise.
-
-### Software Engineering
+The use of recursion in my solutions makes the code very concise and maintainable.
 
 
 ## Solution

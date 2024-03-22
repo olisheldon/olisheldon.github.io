@@ -12,9 +12,22 @@ layout: nested
 
 [**my solution**](https://github.com/olisheldon/AdventOfCode23/blob/main/day1.py)
 
+<!-- <style>
+r { color: Red }
+</style> -->
+
 ## Description
 
 The first problem of this year's Advent Of Code involves string parsing.
+
+<!-- ### Example
+
+```
+1abc2       -> <r>1</r>abc<r>2</r>       -> <r>12</r> +
+pqr3stu8vwx -> pqr<r>3</r>stu<r>8</r>vwx -> <r>38</r> +
+a1b2c3d4e5f -> a<r>1</r>b2c3d4e<r>5</r>f -> <r>15</r> +
+treb7uchet  -> treb<r>7</r>uchet<r></r>  -> <r>77</r> = 142
+``` -->
 
 ## Part 1
 
@@ -24,7 +37,18 @@ In the problem, we are given many of strings from which we must find the calibra
 
 ## Part 2
 
-For part 2, the problem is made more difficult by including strings such as 'one', 'two', etc in considering digits within each line. To modify my solution for this change, I performed the checking for the integers and strings ('one', 'two', ...) through a dictionary of strings to integers. This allowed the same strategy to be used for part 1 and part 2.
+For part 2, the problem is made more difficult by including strings such as 'one', 'two', etc in considering digits within each line.
+
+<!-- ### Example
+
+```
+xtwone3four      -> x<r>two</r>ne3<r>four</r>      -> <r>24</r> +
+4nineeightseven2 -> <r>4</r>nineeightseven<r>2</r> -> <r>42</r> +
+zoneight234      -> z<r>one</r>ight23<r>4</r>      -> <r>14</r> +
+7pqrstsixteen    -> <r>7</r>pqrst<r>six</r>teen    -> <r>76</r> = 156
+``` -->
+
+To modify my solution for this change, I performed the checking for the integers and strings ('one', 'two', ...) through a dictionary of strings to integers. This allowed the same strategy to be used for part 1 and part 2.
 
 However, the use of the same strategy for both parts comes at a performance hit.
 

@@ -52,9 +52,9 @@ This means the pulses are pushed to a queue, and pulses are processed from the f
 
 ### Example
 
-There are a number of very nice examples on the Advent of Code website that I implore you to read before continuing.
+There are a number of very nice examples on the [**Advent of Code website**](https://adventofcode.com/2023/day/20) that I implore you to read before continuing to my solutions.
 
-The most important idea to note from these examples is the idea that pushing the button does not always produce the same same series of pulses sent between each module. As the nodes within the graph contain state that affect the way the module reacts to an incoming pulse, the messages created from pressing the button does not just depend on the structure of the graph but also the state of each node within the graph.
+The most important idea to note from these examples is the idea that pushing the button does not always produce the same same series of pulses sent between each module. As the nodes within the graph contain state that affect the way the module reacts to an incoming pulse, the messages created from pressing the button does not only depend on the structure of the graph but also the state of each node within the graph.
 
 ## Part 1
 
@@ -66,9 +66,7 @@ For part 1, we must build the graph from a list of strings of form:
 
 where `~` is the module type, `name` is the modules name (used for linking between modules), and `list[name]` are the names of the destination modules. 
 
-For part 1, we must build the graph as given and push the button module 1000 times. Throughout these button presses, a number of low and high pulses are sent. We must count these pulse types individually and return their product.
-
-
+Once the graph is built, we push the button module 1000 times. Throughout these button presses, a number of low and high pulses are sent. We must count these pulse types individually and return their product.
 
 To model this I created a 'Motherboard' class that contained all modules within. The modules could then communicate through this Motherboard class. To send messages to each other, a 'Message' class was created that held state of:
 
@@ -90,14 +88,14 @@ At this point within the Advent of Code, the solution to this problem is not goi
 I have not yet completed this part of Day 20's challenge, but I do have a few ideas that I will pursue to solve it:
 
  - The easiest solution would be manual analysis. This analysis would require looking at the modules that contain rx as a destination and analysing these. In the end, the solution is very likely to take the form of finding looping states that create the message I am looking for.
- - Consider grouping together multiple nodes to reduce the size of the graph. This will make the analysis easier. This will involves analysing subgraphs such as FlipFlop->FlipFlop, Conjunction->Conjunction, FlipFlop->Conjunction and so on. I think through this the problem can be made more simple. 
+ - Consider grouping together multiple nodes to reduce the size of the graph. This will make the analysis easier. This will involves analysing subgraphs such as FlipFlop->FlipFlop, Conjunction->Conjunction, FlipFlop->Conjunction and so on. I think through this the problem can be made more simple, and perhaps caching could be employed for subgraphs. 
  - Find an approach that automatically finds cycles within the graph, and uses these to compute the answer after a number of iterations.
 
 ## Improvements
 
 ### Part 1
 
-I think my solution is quite bloated with the number of classes to model this system. However, this does make debugging very nice; For example, my `Message` class can perfectly replicate the Message logging presented on the Advent of Code website
+I think my solution is quite bloated with the number of classes to model this system. However, this does make debugging very nice; For example, my `Message` class can perfectly replicate the Message logging presented on the [**Advent of Code website**](https://adventofcode.com/2023/day/20).
 
 ```
 button -low-> broadcaster

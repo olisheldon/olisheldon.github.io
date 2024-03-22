@@ -52,7 +52,7 @@ The instructions are parsed from the hexademical colour values as follows:
  - The first five hexadecimal digits encode the distance in meters as a five-digit hexadecimal number
  - The last hexadecimal digit encodes the direction to dig: 0 means R, 1 means D, 2 means L, and 3 means U.
 
-This change increases the size of the polygon by a large amount. Thankfully, the time complexity of my solution to part 1 is `O(N)`, where N is the number of instructions. Therefore, the same solution can be reused for part 2 with the same time complexity.
+This change increases the size of the polygon by a large amount. Thankfully, the time complexity of my solution to part 1 is `O(N)`, where N is the number of instructions. Therefore, the same solution can be reused for part 2 with the same (optimal) time complexity.
 
 ## Improvements
 
@@ -60,7 +60,7 @@ I think my solutions to part 1 and 2 are optimal.
 
 ### Algorithms
 
-Shoelace formula and Pick's theorem are formulae that I have never come across before. They are very nice ways to approach problems that consider areas of Polygons.
+Shoelace formula and Pick's theorem are formulae that I have never come across before, but were found through searching for formulae concerning the area of polygons. They are very nice ways to approach problems that consider areas of Polygons.
 
 ### Software Engineering
 

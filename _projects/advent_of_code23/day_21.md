@@ -18,7 +18,7 @@ In this problem we are given a map of a garden containing garden plots, rocks, a
 
 ## Part 1
 
-Starting from the starting position, count the number of tiles that it is possible to be standing on after taking 64 steps.
+For this part, we start from the starting position and count the number of tiles that it is possible to be standing on after taking 64 steps.
 
 I completed this in a very convoluted way and inefficient way. I created a map mimicing the input map, but with extra state attached to each tile that stored whether that tile was reachable. Then, with each step/iteration, I iterated through every position on the map and updated its neighbours according to the rules.
 
@@ -28,7 +28,7 @@ This algorithm contains much repeated work, as discussed later.
 
 For part 2, the map we are given now repeats indefinitely in all directions. Find how many garden plots the Elf could reach in exactly 26501365 steps.
 
-I can not think of how to complete this problem.
+I can not think of how to approach completing this problem. This number of steps is infeasible to iterate through for an indefinitely repeating map as it would use far too much memory. This makes me think that manual analysis would be the only potential approach to finding the solution.
 
 ## Improvements
 

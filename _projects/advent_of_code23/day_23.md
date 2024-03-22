@@ -19,39 +19,39 @@ Day 23 presents a hike through a 2D grid representing hiking trails through a fo
 ### Test Case
 
 ```
-#.#####################
-#.......#########...###
-#######.#########.#.###
-###.....#.>.>.###.#.###
-###v#####.#v#.###.#.###
-###.>...#.#.#.....#...#
-###v###.#.#.#########.#
-###...#.#.#.......#...#
-#####.#.#.#######.#.###
-#.....#.#.#.......#...#
-#.#####.#.#.#########v#
-#.#...#...#...###...>.#
-#.#.#v#######v###.###v#
-#...#.>.#...>.>.#.###.#
-#####v#.#.###v#.#.###.#
-#.....#...#...#.#.#...#
-#.#########.###.#.#.###
-#...###...#...#...#.###
-###.###.#.###v#####v###
-#...#...#.#.>.>.#.>.###
-#.###.###.#.###.#.#v###
-#.....###...###...#...#
-#####################.#
+#.#####################          #S#####################
+#.......#########...###          #OOOOOOO#########...###
+#######.#########.#.###          #######O#########.#.###
+###.....#.>.>.###.#.###          ###OOOOO#OOO>.###.#.###
+###v#####.#v#.###.#.###          ###O#####O#O#.###.#.###
+###.>...#.#.#.....#...#          ###OOOOO#O#O#.....#...#
+###v###.#.#.#########.#          ###v###O#O#O#########.#
+###...#.#.#.......#...#          ###...#O#O#OOOOOOO#...#
+#####.#.#.#######.#.###          #####.#O#O#######O#.###
+#.....#.#.#.......#...#          #.....#O#O#OOOOOOO#...#
+#.#####.#.#.#########v#          #.#####O#O#O#########v#
+#.#...#...#...###...>.#    ->    #.#...#OOO#OOO###OOOOO#
+#.#.#v#######v###.###v#          #.#.#v#######O###O###O#
+#...#.>.#...>.>.#.###.#          #...#.>.#...>OOO#O###O#
+#####v#.#.###v#.#.###.#          #####v#.#.###v#O#O###O#
+#.....#...#...#.#.#...#          #.....#...#...#O#O#OOO#
+#.#########.###.#.#.###          #.#########.###O#O#O###
+#...###...#...#...#.###          #...###...#...#OOO#O###
+###.###.#.###v#####v###          ###.###.#.###v#####O###
+#...#...#.#.>.>.#.>.###          #...#...#.#.>.>.#.>O###
+#.###.###.#.###.#.#v###          #.###.###.#.###.#.#O###
+#.....###...###...#...#          #.....###...###...#OOO#
+#####################.#          #####################O#
 ```
 
 
 ### Longest Path
 
-Unlike shortest path, there is no efficient algorithm for finding the longest path. This makes any optimization to our graph paramount. 
+Unlike shortest path, there is no efficient algorithm for finding the longest path. This makes any optimization to our graph representation paramount. 
 
 ## Part 1
 
-For part 1, we are asked to find an optimal path from the start to the exit under the constraint of having the most scenic hike (longest path while never stepping on the same tile twice). This means finding the longest traversal through the grpah without any cycles.
+For part 1, we are asked to find the optimal path from the start to the exit under the constraint of having the most scenic hike (longest path while never stepping on the same tile twice). This means finding the longest traversal through the grpah without any cycles.
 
 A noteworthy feature of our grid is that all paths are only one tile wide. As we can not go back on ourselves due to our scenic-hike constraint, many of the tiles require no decisions so should not be considered in our longest-path algorithm. Therefore this problem can be massively simplified by performing edge contraction.
 
@@ -87,19 +87,19 @@ dict(Coord(i=0, j=1):
                       Coord(i=5, j=3) : {Coord(i=13, j=5): 22},
                       Coord(i=13, j=5): {Coord(i=14, j=7): 3})
 ```
-where `Coord(i=0, j=1)` is point 1, `Coord(i=5, j=3)` is point 2, `Coord(i=13, j=5)` is point 3, and `Coord(i=14, j=7)` is point 4. Nested within the dictionary we also store the number of 
+where `Coord(i=0, j=1)` is point 1, `Coord(i=5, j=3)` is point 2, `Coord(i=13, j=5)` is point 3, and `Coord(i=14, j=7)` is point 4. Nested within the dictionary we also store the number of steps it takes to reach this point of the path from the previous node.
 
 ### Creating the adjacency list
 
-This requires first finding these decision points. I created this by iterating through all grid tiles, and if a grid tile had more than two neighbours it was declared a decision point and should therefore be added to a list of coordinates for further processing.
+This requires first finding these decision points. I created this data by iterating through all grid tiles, and if a grid tile had more than two neighbours it was declared a decision point and was therefore added to a list of coordinates for further processing.
 
-Once the list of decision points is found, the construction of the adjacency list can begin. For each decision point, we get a dictionary that tells us for each neighbour how far away the point is. We only connect neighbours that are directly adjacent as this would violate our no backtracking constraint. To prevent this problem, for each decision point we breadth-first search outwards and stop propagating when we reach the next neighbours. This prevents us from backtracking. 
+Once the list of decision points is found, the construction of the adjacency list could begin. For each decision point, we get a dictionary that tells us for each neighbour how far away the point is. We only connect neighbours that are directly adjacent as this would violate our no backtracking constraint. To enforce no backtracking, for each decision point we breadth-first search outwards and stop propagating when we reach the next neighbours.
 
 The graph encoded through the adjacency list is directed because as we look for neighbouring points, we stop traversing a root if we try to move up a slope. 
 
-To create the adjacency list we use DFS using a stack. We could alternatively use BFS with a queue. Traversing through the tiles in our graph starting from each decision point, we add the point to our adjacency list if the tile we have traversed to is a decision point and not the starting point. If this is not the case, we add the tile to the set of visited tiles, and append the next possible immediate tiles from this coordinate that we can validly step to. Once the stack is empty, we start the iteration again at the next decision point.
+To create the adjacency list we use depth-first search using a stack. We could alternatively use BFS with a queue. Traversing through the tiles in our graph starting from each decision point, we add the point to our adjacency list if the tile we have traversed to is a decision point and not the starting point. If this is not the case, we add the tile to the set of visited tiles, and append the next possible immediate tiles from this coordinate that we can validly step to. Once the stack is empty, we start the iteration again at the next decision point.
 
-Once the decision points have been iterated over, we have successfully constructed our complete adjacency list, and we can DFS to find the longest path.
+Once the decision points have been iterated over, we have successfully constructed our complete adjacency list, and we can depth-first search to find the longest path.
 
 ### Depth-First Search
 
@@ -113,18 +113,19 @@ Because of the way that my solution to part 1 is written, this change is very ea
 
 ## Improvements
 
-
-### Part 1
+<!-- ### Part 1 -->
 
 ### Part 2
 
-Topological sort could be used to solve part 2 in linear time. I will need to read more about topological sort before doing this.
+Topological sort could be used to solve part 2 in linear time. I would need to read more about topological sort before doing this.
 
 ### Algorithms
 
-I think overall my code is a nice solution to this problem.
+A nice application of depth-first search to solving a graph pathfinding problem.
 
 ### Software Engineering
+
+I think overall my code is a nicely written solution to this problem.
 
 ## Solution
 

@@ -38,16 +38,11 @@ For the input given, this solution is sufficient. If the race times were much lo
 
  - Exploit the symmetry of problem (eg. in a 10 second race holding for 2 seconds and holding for 8 seconds achieve the same distance)
  - Find the time used in each race for the target distance using binary search `(O(N) -> O(logN) search)`
- - Solve the quadratic equation: `t * (T - t) = distance` for a constant time solution
+ - Solve the quadratic equation: `t * (T - t) = distance` for a constant time solution.
 
 ### Algorithms
 
 I used brute force because the input size is small.
-
-### Software Engineering
-
-
-
 
 ## Solution
 

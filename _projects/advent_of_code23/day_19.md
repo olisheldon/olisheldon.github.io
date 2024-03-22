@@ -50,21 +50,20 @@ For part 2, we are told to consider the workflows differently. Instead of queryi
 
 This change makes my approach to part 1 obsolete as the size of the input has increased dramatically. The part category value ranges within which we must consider all combinations is `[0, 4000]`. This increases the number of parts we need to consider to `4000 ** 4 = 256000000000000`.To put this into perspective, part 1 had us consider 200 parts. This number of parts would produce an unfeasibly long runtime for the problem if we continue our strategy outlined in part 1. Instead, we need to change our workflows to operate on intervals of numbers.
 
-Similar to [**day 5**](https://olisheldon.github.io/projects/adventofcode23/day_5.html), we use intervals makes our problem tractable. Instead of rules passing or failing a part, they can instead split an interval of parts into multiple intervals. Each of these new intervals will then follow the workflow in which it must go.
+Similar to [**day 5**](https://olisheldon.github.io/projects/adventofcode23/day_5.html), we use intervals to our problem tractable. Instead of rules passing or failing a part, they instead split an interval of parts into multiple intervals. Each of these new intervals will then follow the workflow in which it must go.
 
 I decided to implement this new strategy using recursion within my container coordinating all of the individual workflows. The base cases for this recursion are if a workflowm results in an ACCEPT ('A') or REJECT ('R'). 
 
 When passed to a workflow, each interval is queried by all of the rules contained by it. Each rule splits an interval into a 'pass' subinterval and 'fail' subinterval. These new subintervals must then be sent to different workflows, or returned as they have been assigned an outcome.
 
-```
-VISUALIZE DECISION TREE!
-```
+<!-- [comment]: <> (VISUALIZE DECISION TREE) -->
+
 
 To reduce redundant code, I removed my solution to part 1 and solved it using my solution to part 2.
 
 ## Improvements
 
-### Part 1
+<!-- ### Part 1 -->
 
 ### Part 2
 
@@ -72,13 +71,13 @@ I used the same Interval data structure to complete day 5. In that problem I use
 
 The answer is no, because we are never considering a list of intervals, only a single interval at a time.
 
-### Algorithms
+<!-- ### Algorithms -->
 
 ### Software Engineering
 
-Throughout writing my solution, I found my code suffering from 'drilling' as many of the classes I created to solve this problem just pass the work further down the chain until the class at the bottom finally handles it. I tried to rewrite my solution to prevent this, but I think I was only partly successful in this.
+Throughout writing my solution, I found my code suffering from 'drilling' as many of the classes I created to solve this problem just passed their work further down a chain if classes with similar interfaces until the class at the bottom finally handled it. I tried to rewrite my solution to prevent this, but I think I was only partly successful in this.
 
-The classes I created are too dependent on each other. For example, the Operator enum class I created for handling the '<' and '>' logic has a method that has direct knowledge of the Interval interface. This felt natural for writing this code, but I am not sure of the best way to remedy this.
+The classes I created are too dependent on each other. For example, the Operator enum class I created for handling the '<' and '>' logic has a method that has direct knowledge of the Interval interface. This felt natural while writing this code, but I am not sure of the best way to remedy this.
 
 
 ## Solution

@@ -25,7 +25,7 @@ The free-falling bricks can only be positioned in integer coordinates.
 
 ### Falling
 
-We must let the bricks fall, and then determine how many of the bricks in this equilibrium, fallen state can be individually destroyed without causing any other bricks to fall.
+We must first let the bricks fall. Then when the bricks have fallen to their equilibrium fallen state, find which bricks in this state can be individually destroyed without causing any other bricks to fall.
 
 To solve this, I first found it important sort the bricks in order of height. I then found a way to calculate if two bricks overlap in the x-y plane. Then, with this information, a nested loop can be run on each pair of bricks in height-ascending order, if the pair of bricks overlap we then update the higher bricks Z-position to the lower bricks Z-position + 1. 
 
@@ -52,7 +52,7 @@ For part 2, we consider the effect of distintegrating each brick and the chain r
 
 To solve this we use breadth-first fill. For each brick, we disintegrate it and create a queue of objects which were only prevented from falling by that brick. We also maintain a set of bricks that are now falling due to this brick's disintegration. 
 
-With this disintegrated brick and queue of bricks that are now falling directly because of the disintegrated brick, we iterate through the queue as follows:
+With this disintegrated brick and a queue of bricks that are now falling directly because of the disintegrated brick, we iterate through the queue as follows:
 
 For each no-longer supported brick, iterate through each brick that will now cascade because it was being supported by this brick. If this cascading brick is not already falling, and everything that supports the cascading brick is already falling (or was disintegrated), then we have determined that this cascading brick is a falling brick, so we must add the cascading brick to the queue **AND** add it to the set of falling bricks. We iterate in this way through the queue until the queue is finally empty, add the number of cascading bricks to a count and move onto considering the next bricks disintegration. 
 
@@ -62,13 +62,13 @@ For each no-longer supported brick, iterate through each brick that will now cas
 
 #### Falling
 
-The `O(N**2)` algorithm for is definitely not optimal, but is fine for the given input. This would be the first place to improve for larger inputs.
+The `O(N**2)` algorithm I use to simulate the falling of the snapshot bricks is definitely not optimal, but is fine for the given input size. This would be the first place to optimize if a larger input size was used.
 
 #### Disintegrating
 
 I think my algorithm for disintegrating is a good approach to the problem.
 
-### Part 2
+<!-- ### Part 2 -->
 
 ### Algorithms
 
@@ -76,9 +76,9 @@ The use of breadth-first fill was a nice approach to part 2.
 
 ### Software Engineering
 
-The data structures holding the data for the bidirectional brick supporting data should be wrapped in a class.
+One critique of my solution is with the data structures holding the data for the bidirectional brick supporting data. This data should definitely be wrapped in a class, rather than just obtaining the data through a function call.
 
-I made the `BrickContainer` class store the bricks in an attribute as a tuple. This made the initial brick snapshot data immutable. 
+I made the `BrickContainer` class store the bricks in an attribute as a tuple. This made the initial brick snapshot data immutable. It is nice to make this data immutable because it should not be edited.
 
 ## Solution
 

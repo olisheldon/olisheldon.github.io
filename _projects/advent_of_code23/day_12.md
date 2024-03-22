@@ -24,8 +24,11 @@ This problem presents rows of springs containing damaged, operational, or unknow
 | DAMAGED    |      #      |
 | UNKNOWN    |      ?      |
 
+
 ```
 ???.### 1,1,3 -> #.#.### (1 possibility)
+```
+```
 .??..??...?##. 1,1,3 -> .#...#....###. (4 possibilities)
                         .#....#...###. 
                         ..#..#....###. 
@@ -36,7 +39,7 @@ This problem presents rows of springs containing damaged, operational, or unknow
 
 For each row, we must calculate the number of possible arrangements for the row configuration. We return the sum of the number of total possible arrangements for each of the spring and configuration pairs.
 
-This problem can be solved using either dynamic programming problem or recursion, I chose recursion for simplicity but a DP solution would likely be more memory efficient.
+This problem can be solved using either dynamic programming problem or recursion, I chose recursion for simplicity but a DP solution would likely be more memory efficient (espeically if a bottom-up solution could be ).
 
 The most difficult part of this problem is working out the decision tree...
 
@@ -67,7 +70,7 @@ If we have passed the base cases, we must make decisions based on the state of t
 ```
 
 
-If the first spring in our springs subproblem is operational or unknown, we pretend the unknown spring is operational and recurse on the `springs[1:], configuration` subproblem.
+If the first spring in our springs subproblem is operational or unknown, we pretend the unknown spring is operational and recurse on the `(springs[1:], configuration)` subproblem.
 
 If the first spring in our springs subproblem is damaged or unknown, we treat the unknown spring as a damgaged spring and check a number of conditions are true:
 
@@ -75,7 +78,7 @@ If the first spring in our springs subproblem is damaged or unknown, we treat th
  - The block of damaged springs can't contain operational spring
  - (There are no springs left, so number of springs left equals the configuration) OR (if there are springs afterwards the next spring must not be damaged)
 
-If all of these conditions are met, we recurse on the subproblem `springs[configuration[0] + 1 : ], configuration[1:]`. This is done because we are looking for new damaged blocks and we know springs[configuration[0] + 1] is unknown or operational from our our final condition. We also found a damaged block, so remove the first configuration.
+If all of these conditions are met, we recurse on the subproblem `(springs[configuration[0] + 1 : ], configuration[1:])`. This is done because we are looking for new damaged blocks and we know springs[configuration[0] + 1] is unknown or operational from our our final condition. We also found a damaged block, so remove the first configuration.
 
 Implementing this decision tree in the recursive solution, we return the correct answer.
 

@@ -52,9 +52,8 @@ but also
 .|..||..|.    .|II||II|.
 .L--JL--J.    .L--JL--J.
 ..........    ..........
-
-(Taken from [**Advent of Code Day 10 Example**](https://adventofcode.com/2023/day/10))
 ```
+(Taken from [**Advent of Code Day 10 Example**](https://adventofcode.com/2023/day/10))
 
 A strategy for checking whether a coordinate is inside or outside of a loop is to count the number of times the loop is crossed. Looking at this, a few rules can be made:
 
@@ -96,6 +95,8 @@ How many crossings does this contain? I argue one (consider a 2D line, how many 
 ```
 >F-7
 ```
+
+This does not count as a crossing.
 
 ### Part 2 Summary
 

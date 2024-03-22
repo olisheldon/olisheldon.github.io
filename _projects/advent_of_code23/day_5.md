@@ -68,15 +68,17 @@ As there are only 20 seed values to query, this is efficient enough to quickly r
 
 For part 2, we no longer interpret the seeds as separate integer values. The seed values are instead pairs of values that represent an initial seed value and the number of seeds to consider after that. i.e. `79 14` correspond to the seeds values `79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92`.
 
-Although a small change to the idea, this showed the inefficiency of my approach to solving part 1. For the actual input, the first seed range we would now consider is `2637529854 223394899`, corresponding to 223394899 seeds. For the approach taken in part 1, this would mean iterating `~1e9` times: Far too many making this approach impossible.
+Although a small change to the idea, this showed the inefficiency of my approach to solving part 1. For the actual input, the first seed range we would now consider is `2637529854 223394899`, corresponding to 223394899 seeds. For the approach taken in part 1, this would mean iterating `~1e9` times: Far too many, making this approach impossible.
 
 Part 2 has essentially changed our input from individual seed values to intervals of values. I mirrored this change by changing my logic to handle mapping intervals of values (input seed intervals) by intervals of values (mappings). Therefore, when querying a mapping with a value, this value must be change to represent an interval of values. 
 
-Each time that an interval of values queries a mapping, anywhere between 1 and 3 intervals may be produced depending on how the interval and mapping intersects. This easiest to show visually:
+Each time that an interval of values queries a mapping, anywhere between 1 and 3 intervals may be produced depending on how the interval and mapping intersects. 
+
+<!-- This easiest to show visually:
 
 ```
 SHOWING VISUALLY!
-```
+``` -->
 
 Implementing this was tricky as I had never considered a problem like this before, but after much trial and error I got the correct answer.
 
@@ -146,6 +148,8 @@ With this, we can see that this optimization does have a significant affect on t
 
 
 ### Algorithms
+
+Algorithms for merging and manipulating intervals of integers.
 
 ### Software Engineering
 

@@ -14,30 +14,30 @@ layout: nested
 
 ## Description
 
-For today's problem we have many machines that have been wired together. We are asked to remove three wires such at least half of the machines are disconnected. i.e. this action should divide the components into two separate, disconnected groups.
+For this days problem we are presented with many machines that have been wired together. This is a graph with bidirectional edges.
 
 ## Part 1
 
-Disconnect three wires as previously stated, then return the product of the number of machines within each of the disconnected groups.
+We are asked to remove three wires such at least half of the machines are disconnected. i.e. this action should divide the components into two separate, disconnected groups. Once the wires have been removed, return the product of the number of machines within each of the disconnected groups.
 
 I am not sure how I should approach this problem. I have seen similar problems solved using Physics simulations of graphs (modelling vertices as springs and such), but I am not sure this can be applied here.
 
-## Part 2
+<!-- ## Part 2 -->
 
-## Improvements
+<!-- ## Improvements -->
 
-### Part 1
+<!-- ### Part 1 -->
 
-### Part 2
+<!-- ### Part 2 -->
 
 ### Algorithms
 
-I need to learn more graph theory to solve this. Look into:
+I need to learn more graph theory to solve this. To begin, I would read about:
 
  - Karger's Algorithm
  - Ford-Fulkerson
 
-### Software Engineering
+<!-- ### Software Engineering -->
 
 
 ## Solution

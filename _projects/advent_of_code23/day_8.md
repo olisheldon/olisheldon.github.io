@@ -18,7 +18,7 @@ This problem contains a list of instructions and nodes. Each node is labelled wi
 
 The list of instructions are a series of individual left or right instructions, deciding the next node to visit. The instructions never terminate, but instead cycle continuously. The traversal through the graph terminates at node 'ZZZ'.
 
-This is a graph problem that must be traversed via a pre-defined path.
+This is a graph problem, with traversal via a pre-defined path.
 
 ## Part 1
 
@@ -40,8 +40,6 @@ I considered each entry node separately, tracking the *minimum number of instruc
 ### Algorithms
 
 I represented the problem as a directed graph. Because the instructions are hard-coded, no decision have to be made. Therefore, there is no use for a depth-first search or breadth-first search algorithm.
-
-### Software Engineering
 
 #### Positive
 

@@ -29,7 +29,7 @@ This problem requires analysing an 'engine schematic' (2D grid of digits, symbol
 .664.598..
 ```
 
-This engine schematic is interpret as follows:
+This engine schematic is interpreted as follows:
 
  - Part numbers are adjacent (including diagonally) to at least one symbol (not including full stop).
 
@@ -37,23 +37,23 @@ This engine schematic is interpret as follows:
 
 Return the sum of all part numbers in a given engine schematic.
 
-To do this, I parsed all of the numbers and into two separate containers and performed checks on the boundary of all numbers to check for gears.
+To do this, I parsed all of the numbers and symbols and into two separate containers that held their values and coordinates. I then performed checks on the boundary of all numbers to check for the presence of gears within this boundary.
 
 ## Part 2
 
-We now define a gear as any '*' symbol that is adjacent to exactly two part numbers. Its gear ratio is the result of multiplying those two numbers together. Return the sum of all gear ratios.
+In part 2 the concept of a gear is introduced with a more strict definition: any '*' symbol that is adjacent to exactly two part numbers. Each gear has a gear ratio that can be calculated from the multiplication of its two adjacent numbers. Return the sum of all gear ratios.
 
-The same method as part 1 was used with different conditions.
+To complete this I used the same method as part 1, but with the stricter definitions of a gear to filter the symbols into only gears. From here, the gear ratios can be calculated, summed and returned.
 
 ## Improvements
 
 ### Algorithms
 
-The time complexity of my solution is linear O(N) where N is the number of characters in the engine schematic.
+The time complexity of my solution is linear `O(N)` where N is the number of characters in the engine schematic. This assumes that the length of numbers within the engine schematic is much smaller than the width of the engine schematic, which seems reasonable.
 
 ### Software Engineering
 
-The part_1() and part_2() (outside of the problems classes) methods contain too much logic. These should be pulled out into an 'Engine Schematic' class. However, the problem is not complex enough to warrant this.
+The part_1() and part_2() methods contain too much logic. These should be pulled out into an 'Engine Schematic' class. However, the problem is not complex enough to warrant this.
 
 ## Solution
 

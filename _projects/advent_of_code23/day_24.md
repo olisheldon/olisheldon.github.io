@@ -14,7 +14,7 @@ layout: nested
 
 ## Description
 
-In this problem, we are provided with a snapshot a system of hailstones positions and velocities. Asssuming the hailstones move in a perfectly linear motion, we must count how many of the hailstones **paths** will intersect within a test area.
+In this problem, we are provided with a snapshot a system of hailstones positions and velocities. Asssuming the hailstones move in a perfectly linear motion, we must count how many of the hailstones **paths** (not just collisions) will intersect within a test area.
 
 ## Part 1
 
@@ -38,21 +38,22 @@ If all of these are true, these pair of hailstones should be counted.
 
 For part 2, we are asked to find a position and velocity such that this new hailstone collides with every hailstone.
 
-This problem could be solved in the same way as part 1, but with much more complex and involved algebra. Alternatively, a simultaneous-equation-solving library could be used.
+This problem could be solved in the same way as part 1, but with much more complex and involved algebra. 
+<!-- Alternatively, a simultaneous-equation-solving library could be used. -->
 
 ## Improvements
 
 ### Part 1
 
-Optimal time complexity.
+My solution to part 1 is analytical and produces an optimal time complexity.
 
-### Part 2
+<!-- ### Part 2 -->
 
 ### Algorithms
 
 Part 1 only requires basic algebra.
 
-### Software Engineering
+<!-- ### Software Engineering -->
 
 
 ## Solution

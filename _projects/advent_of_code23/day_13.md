@@ -36,15 +36,15 @@ Instead of looking for a reflection boundary that results in a valid reflection,
 
 In fact, the only change required from part 1 is to change the final predicate for finding a _valid_ reflection boundary from no errors to exactly one error.
 
-## Improvements
+<!-- ## Improvements
 
 ### Part 1
 
-### Part 2
+### Part 2 -->
 
 ### Algorithms
 
-Simple brute force. I don't think there are any particular algorithms for this type of problem.
+Simple brute force. I am not aware of any efficient algorithms for this type of problem.
 
 ### Software Engineering
 

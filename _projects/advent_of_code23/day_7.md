@@ -56,13 +56,15 @@ We must play a game of Camel Cards again and return the total winnings with this
 
 ## Improvements
 
-This problem is more difficult in setting up the logic of sorting than worrying about time complexity.
+My solution has optimal time complexity.
 
 ### Algorithms
 
-The built in Python sorting will use an O(NlogN) sorting algorithm.
+I use the built-in Python sort command, which has `O(NlogN)` time complexity. In this, I am assuming that the comparison between two of my `Hand` classes has constant time complexity, which is the case.
 
 ### Software Engineering
+
+I used a [Mixin](https://en.wikipedia.org/wiki/Mixin) !!! THIS SHOULD JUST BE A BASE CLASS"
 
 My logic for generating the possible hands of cards in part 2 is unclear. There should be a much shorter, easier to follow recursive solution.
 

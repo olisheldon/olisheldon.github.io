@@ -14,7 +14,7 @@ layout: nested
 
 ## Description
 
-This problem requires modelling laser beams moving through a configuration of mirrors and splitters. The configuration is given to us by a 2D grid. The mirrors ('/' and '\' characters) reflect the beam as you would expected, meanwhile splitters ('-' and '|') split the beam. A beam is split if the beam encounters a splitter while travelling perpendicular to its face. i.e. `-> |`, `| <-` etc. A split beam results in two beams travelling parallel to the face of the splitter. 
+This problem requires modelling laser beams moving through a configuration of mirrors and splitters. The configuration is given to us by a 2D grid. The mirrors ('`/`' and '`\`' characters) reflect the beam as you would expected, meanwhile splitters ('`-`' and '`|`') split the beam. A beam is split if the beam encounters a splitter while travelling perpendicular to its face. i.e. `-> \|`, `| <-` etc. A split beam results in two beams travelling parallel to the face of the splitter. 
 
 The beams never react to each other, and energize the floor when passing over any part of the grid.
 
@@ -24,13 +24,13 @@ With a beam starting the top-left corner heading right, how many tiles end up be
 
 I solved this by maintaining a list of Laser's that have a coordinate and a direction. Iteratively, a laser is popped from the list and the laser is moved to its next tile and the affect this has is processed. Depending on the tile in which the laser lies, it may:
 
- - Do nothing: If on a ground tile, the laser with this new coordinate and same direction is added to the list of lasers.
- - Change direction: If on a mirror tile, the laser with this new coordinate but different direction is added to the list.
- - Split: If on a splitter tile, two new lasers with this new coordinate but perpendiular directions to the original laser (and opposite to each other) will be added to the list.
+ - **Do nothing**: If on a ground tile, the laser with this new coordinate and same direction is added to the list of lasers.
+ - **Change direction**: If on a mirror tile, the laser with this new coordinate but different direction is added to the list.
+ - **Split**: If on a splitter tile, two new lasers with this new coordinate but perpendiular directions to the original laser (and opposite to each other) will be added to the list.
 
 If a new laser is the same as one that has already been processed, it is skipped. This is done by maintaining a set of seen laser states.
 
-Iterating until the list of lasers is empty, we return the number of grid tiles energized through this process.
+Iterating until the list of lasers is empty, we return the number of grid tiles energized through this process by returning the length of the laser states set.
 
 ## Part 2
 
@@ -44,9 +44,9 @@ To do this, I repeated part 1 for each of the new laser states. No caching was u
 
 I stored the laser states to be processed in a list (first-in-last-out) data structure. Another implementation could use a queue (first-in-first-out) data structure.
 
-A queue would produce a breadth-first search solution, meanwhile the list produces a depth-first search solution; But do these two approaches have different time complexity? Although in most problems, breadth-first search has a lower time complexity I argue that this is not the case for this problem and both approaches have the same time complexity because we avoid repeated work.
+A queue would produce a breadth-first search solution, meanwhile the list produces a depth-first search solution. But do these two approaches have different time complexity? Although in most problems, breadth-first search has a lower time complexity I argue that this is not the case for this problem and both approaches have the same time complexity because we avoid repeated work through the use of the laser_states set.
 
-As we are not making any decisions, and instead are following a deterministic series of laser states, there is not necessarily any extra processing for the depth-first search solution I used.
+As we are not making any decisions, and instead are following a deterministic series of laser states, there is not necessarily any extra processing for the depth-first-style solution I used.
 
 ### Part 2
 
