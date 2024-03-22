@@ -67,7 +67,7 @@ Data structures required:
  - Visit (hashset)
  - MinHeap (wgt, n1, n2)
 
-VISUALIZATION
+<!-- VISUALIZATION -->
 
 Just as it is very similar to Dijkstras in structure, so it is in time complexity:
  - Time complexity: `O(ElogV)`
@@ -173,7 +173,7 @@ def minimumSpanningTree(edges, n):
 
 ## Topological Sort
 
-Visualization
+<!-- Visualization -->
 
 Topological sort: For every edge (strictly directed). Guarantees source node comes before the destination node in the topological sort result. 
 
@@ -181,7 +181,7 @@ Graphs must be directed *and* acyclical (DAG).
 
 Can choose to implement with DFS or BFS. 
 
-Explanation with visualization!
+<!-- Explanation with visualization! -->
 
 ```python
 # Given a directed acyclical graph, return a valid

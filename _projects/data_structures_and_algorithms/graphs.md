@@ -108,7 +108,7 @@ Q: What is the length of the shortest path from the top left of the grid to the 
 
 We could reuse our DFS algorithm but this is a brute-force approach and very inefficient. With BFS we can solve this problem in linear time (O(N)). BFS requires the use of a queue data structure, allowing efficient popping from one end and efficient pushing to the other. This gives us a data structure with a first-in-first-out (FIFO) property.
 
-## Visualization
+<!-- ## Visualization -->
 
 ## Code
 

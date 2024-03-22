@@ -40,15 +40,15 @@ The pages found below document my solutions to the 2023 Advent of Code puzzles w
 
 These problems were particularly interesting this year!
 
-| Day        | Interesting Feature             |
-|------------|---------------------------------|
-|     5      | Intervals                       |
-|     12     | Recursion & LRU Caching         |
-|     17     | Dijkstras Algorithm             |
-|     18     | Mixin                           |
-|     19     | Intervals                       |
-|     20     | Abstract Base Class             |
-|     23     | Longest Path                    |
+| Day        | Description                                                  |
+|------------|--------------------------------------------------------------|
+|     5      | Difficult problem with interesting optimizations.            |
+|     12     | Recursion with least-recently-used caching for optimization. |
+|     17     | Dijkstra's Algorithm with interesting path shapes.           |
+|     18     | Use of Mixin to reinterpret input at runtime.                |
+|     19     | Another difficult interval problem!                          |
+|     20     | Use of Abstract Base Class to declare interface.             |
+|     23     | Longest path in a graph while utilizing edge contraction     |
 
 <!-- # Index -->
 

@@ -138,8 +138,6 @@ def helper2(i: int, cur_comb: list[int], combs: list[list[int]], n: int, k: int)
 
 Question: What are all distinct permutatinos of a list of integers?
 
-visualization
-
 ```python
 # Time: O(n^2 * n!)
 def permutations_recursive(nums: list[int]) -> list[list[int]]:
