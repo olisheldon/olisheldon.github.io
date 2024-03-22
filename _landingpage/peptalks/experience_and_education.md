@@ -1,8 +1,26 @@
 ---
 layout: peptalk
-icon: computer
-title: Projects
+icon: work
+title: Education & Projects
 ---
+
+_________________
+
+
+University of Warwick `||` September 2021 - September 2022
+
+MSc Computer Science
+
+_Merit_
+
+
+Lancaster University `||` September 2018 - July 2021
+
+BSc Theoretical Physics
+
+_First-Class Honours_
+
+
 _________________
 
 [**Advent of Code 2023**](https://olisheldon.github.io/projects/advent_of_code23.html)
