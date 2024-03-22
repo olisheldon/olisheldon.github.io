@@ -3,7 +3,6 @@ layout: peptalk
 icon: work
 title: Education & Projects
 ---
-
 _________________
 
 
@@ -20,8 +19,11 @@ BSc Theoretical Physics
 
 _First-Class Honours_
 
-
-_________________
+---
+layout: peptalk
+icon: work
+title: Education & Projects
+---
 
 [**Advent of Code 2023**](https://olisheldon.github.io/projects/advent_of_code23.html)
 
