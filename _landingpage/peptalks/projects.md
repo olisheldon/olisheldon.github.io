@@ -3,6 +3,7 @@ layout: peptalk
 icon: computer
 title: Projects
 ---
+_________________
 
 [**Advent of Code 2023**](https://olisheldon.github.io/projects/advent_of_code23.html)
 

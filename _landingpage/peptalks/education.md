@@ -6,14 +6,15 @@ title: Education
 _________________
 
 
-University of Warwick `||` September 2021 - September 2022
+University of Warwick
 
 MSc Computer Science
 
 _Merit_
 
+_________________
 
-Lancaster University `||` September 2018 - July 2021
+Lancaster University
 
 BSc Theoretical Physics
 
