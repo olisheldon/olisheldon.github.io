@@ -1,7 +1,7 @@
 ---
 layout: peptalk
 icon: address-card
-title: About & Experience
+title: About
 ---
 _________________
 
