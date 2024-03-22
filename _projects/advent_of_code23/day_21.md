@@ -1,6 +1,6 @@
 ---
 title: "Day 21: Step Counter"
-description: <br/> Graph Flooding <br/> <br/> Difficulty ★★★
+description: Graph Flooding <br/> Difficulty ★★★
 layout: nested
 ---
 

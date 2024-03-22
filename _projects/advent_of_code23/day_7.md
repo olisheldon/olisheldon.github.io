@@ -1,6 +1,6 @@
 ---
 title: "Day 7: Camel Cards"
-description: <br/> Sorting <br/> <br/> Difficulty ★
+description: Sorting <br/> Difficulty ★
 layout: nested
 ---
 

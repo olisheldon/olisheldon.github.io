@@ -30,21 +30,25 @@ files:
   - 'day_25'
 ---
 
-# [Advent of Code 2023](https://adventofcode.com/2023)
+# [**Advent of Code 2023**](https://adventofcode.com/2023)
 
 `Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like. People use them as interview prep, company training, university coursework, practice problems, a speed contest, or to challenge each other.`
 
-The pages found below document my solutions to the 2023 Advent of Code puzzles. These pages describe the problems, discuss my thought process, and explain ways that I will improve them in the future! The explanation will explain the style of solution that was used, how these map to common Leetcode-style problems, and visualizations of the solution where possible.
+The pages found below document my solutions to the 2023 Advent of Code puzzles written in Python. These pages describe the problems, discuss my thought process, and detail my solutions to them. Within each page I also provide a critique of my solution in terms of computational efficiency and software quality.
 
-## Most Interesting Problems
+### Most Interesting Problems
 
- - Day 5
- - Day 12
- - Day 17
- - Day 18 (Mixin)
- - Day 19 (Interval)
- - Day 22
- - Day 23
+These problems were particularly interesting this year!
+
+| Day        | Interesting Feature             |
+|------------|---------------------------------|
+|     5      | Intervals                       |
+|     12     | Recursion & LRU Caching         |
+|     17     | Dijkstras Algorithm             |
+|     18     | Mixin                           |
+|     19     | Intervals                       |
+|     20     | Abstract Base Class             |
+|     23     | Longest Path                    |
 
 <!-- # Index -->
 

@@ -1,6 +1,6 @@
 ---
 title: "Day 22: Sand Slabs"
-description: Tetris Physics <br/> <br/> <br/> Difficulty ★★
+description: Tetris Physics <br/> <br/> Difficulty ★★
 layout: nested
 ---
 

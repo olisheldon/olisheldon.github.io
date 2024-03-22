@@ -1,6 +1,6 @@
 ---
 title: "Day 12: Hot Springs"
-description: <br/> Recursion <br/> <br/> Difficulty ★★
+description: Recursion <br/> Difficulty ★★
 layout: nested
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Day 6: Wait For It"
-description: <br/> SUVAT <br/> <br/> Difficulty ★
+description: SUVAT <br/> Difficulty ★
 layout: nested
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Day 10: Pipe Maze"
-description: <br/> Graph no pathfinding <br/> <br/> Difficulty ★★
+description: Graph no pathfinding <br/> Difficulty ★★
 layout: nested
 ---
 
