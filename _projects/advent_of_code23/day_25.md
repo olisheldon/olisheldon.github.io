@@ -1,6 +1,6 @@
 ---
 title: "Day 25: Snowverload"
-description: Graph Theory (Bidirectional) <br/> INCOMPLETE <br/> Difficulty ★★★
+description: Graph Theory (Bidirectional) <br/> Difficulty ★★★
 layout: nested
 ---
 
