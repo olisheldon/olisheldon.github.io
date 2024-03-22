@@ -1,6 +1,6 @@
 ---
 layout: peptalk
-icon: address-card
+icon: account_circle
 title: About
 ---
 _________________

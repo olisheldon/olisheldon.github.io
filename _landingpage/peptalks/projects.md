@@ -1,6 +1,6 @@
 ---
 layout: peptalk
-icon: work
+icon: computer
 title: Projects
 ---
 
