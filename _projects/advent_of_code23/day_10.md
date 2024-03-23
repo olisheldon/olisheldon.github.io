@@ -100,20 +100,24 @@ This does not count as a crossing.
 
 ### Part 2 Summary
 
-With these extra rules for crossing, I still do not have the correct answer :(
+With these extra rules for crossing, I get a value that is one larger than the correct answer. There is clearly a bug in the part 2 solution that should be debugged.
+
+Following more testing with more inputs, it is clear that my solution will always find more interior parts than are actually present.
 
 
-## Improvements
+<!-- ## Improvements -->
 
-### Part 1
+<!-- ### Part 1 -->
 
-### Part 2
+<!-- ### Part 2 -->
 
-My implementation has a bug in it so I do not get the correct answer. Need to look into this.
+My implementation has a bug in it so I do not get the correct answer. I need to look more into this.
 
-### Algorithms
+<!-- ### Algorithms -->
 
 ### Software Engineering
+
+A critique of my code is that the `Tile` class attribute 'segment' should be handled by the `Maze` instance.
 
 
 ## Solution
