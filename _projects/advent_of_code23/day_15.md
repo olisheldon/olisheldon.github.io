@@ -14,12 +14,18 @@ layout: nested
 
 ## Description
 
-In this problem we consider an initialization sequence, a comma separate list of instructions to process. 
+In this problem we consider an _initialization sequence_, a comma separated list of instructions to process. 
 
-Examples: `lkb-,dncgk=5, ...`
+An example of this *initialization sequence* (`lkb-,dncgk=5, ...`) shows two instructions. Instructions can take two possible forms:
+
+ - `<name>=<number>`
+ - `<name>-`
+
+
+
 ## Part 1
 
-Part 1 has us write a simple hashing function to map the string associated with each instruction to an integer in `[0, 256)`.
+In part 1, we are asked to us write a simple hashing function to map the string associated with each instruction to an integer in `[0, 256)`.
 
 We return the sum of the hash value of each instruction, to show that the hashing functions properly.
 
@@ -34,7 +40,6 @@ Instructions may contain either a '-' or '=' sign, indicating the operation to a
  - '-' : Move to the relevant box, and remove the lens with the given label if it is present in the box, then move any remaining lenses forward in the box. This instruction has no affect if the given label is not present within the box. 
  - '=' : Instructions containing an equals sign are followed by an integer that should be interpreted as a 'focal length'. If a lens with the same label is already present, replace the old lens with the new lens. Otherwise, if there is not a lens with that label in the box, add the lens to the back of the box. 
 
-
 After interpreting the entire sequence, return the total _focusing power_ of all of the lenses. The focusing power of a single lens is the product of:
 
  - One plus the box number of the lens in question.
@@ -47,7 +52,7 @@ In my solution, I implemented the boxes as a list of list of strings, of total l
 
 ## Improvements
 
-### Part 1
+<!-- ### Part 1 -->
 
 ### Part 2
 
@@ -57,7 +62,7 @@ This allowed for the class instance representing the boxes and focal lengths to 
 
 My only issue with part 2 of this problem was my choice to implement the boxes as a list of lists. As the problem requires us to remove elements from anywhere within these structures, we will be removing elements from the list structure. As the lists are not sorted, this takes O(N) time. This leads to a time complexity of O(N**2). Could this be improved?
 
-### Algorithms
+<!-- ### Algorithms -->
 
 ### Software Engineering
 

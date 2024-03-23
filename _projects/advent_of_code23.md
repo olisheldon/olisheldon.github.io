@@ -44,6 +44,7 @@ These problems were particularly interesting this year!
 |------------|-----------------------------------------------------------------------|
 |     5      | Difficult problem involving intervals with interesting optimizations. |
 |     12     | Recursion with least-recently-used caching for optimization.          |
+|     15     | Use of abstract base class for well-defined interface.                |
 |     17     | Dijkstra's Algorithm with interesting path shapes.                    |
 |     18     | Use of Mixin to reinterpret input at runtime.                         |
 |     19     | Another difficult interval problem!                                   |
