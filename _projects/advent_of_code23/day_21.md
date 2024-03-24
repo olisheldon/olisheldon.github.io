@@ -14,7 +14,7 @@ layout: nested
 
 ## Description
 
-In this problem we are given a map of a garden containing garden plots, rocks, and a starting position (that is a garden plot). Each step from the starting position can be in any of the cardinal directions onto adjacent garden plots.
+In this problem we are given a map of a garden containing garden plots, rocks, and a starting position. Each step from the starting position can be in any of the cardinal directions onto adjacent garden plots.
 
 ## Part 1
 
@@ -36,15 +36,15 @@ I can not think of how to approach completing this problem. This number of steps
 
 My solution to part 1 is very inefficient, as this problem could instead be solved by a breadth-first fill.
 
-If we reach a position with an even number of steps remaining, we can end up on that position again because we can just keep moving back and forth between that position and the position we just came from. This means that we never need to revisit the same space twice. If we get arrive at a garden plot and it is an odd number of steps from the start, that can never change. This means that we never need t
+If we reach a position with an even number of steps remaining, we can end up on that position again because we can just keep moving back and forth between that position and the position we just came from. This means that we never need to revisit the same space twice. If we get arrive at a garden plot and it is an odd number of steps from the start, that can never change. This means that once we have determined a position as reachable within the n steps, it will always remain reachable within greater than n steps.
 
 ### Part 2
 
 ### Algorithms
 
-#### Breadth-First Fill
-
 My approach has an exponential time complexity. This is because for every step we increase the number of steps we consider for the next step exponentially. Breadth-first fill would have an improved time complexity.
+
+#### Breadth-First Fill
 
 Breadth-first fill is possible because
 

@@ -51,7 +51,7 @@ My solution to part 1 is analytical and produces an optimal time complexity.
 
 ### Algorithms
 
-Part 1 only requires basic algebra.
+Part 1 only requires basic algebra. Part 2 will require much more complex algebra.
 
 <!-- ### Software Engineering -->
 
