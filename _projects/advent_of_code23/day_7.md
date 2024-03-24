@@ -64,9 +64,9 @@ I use the built-in Python sort command, which has `O(NlogN)` time complexity. In
 
 ### Software Engineering
 
-I used a [Mixin](https://en.wikipedia.org/wiki/Mixin) !!! THIS SHOULD JUST BE A BASE CLASS"
+I used a [Mixin](https://en.wikipedia.org/wiki/Mixin) instead an abstract base class because it was not possible to inherit from abstract base class and IntEnum as this would cause errors about metaprogramming. The Mixin approach achieves the same effect of a shared interface, but without the promise of implementation in all *abstract* methods. 
 
-My logic for generating the possible hands of cards in part 2 is unclear. There should be a much shorter, easier to follow recursive solution.
+My logic for generating the possible hands of cards in part 2 is unclear. There should be a much shorter, easier to follow recursive solution that I could use instead.
 
 
 ## Solution
