@@ -1,10 +1,10 @@
 ---
-title: "Day 1: Pairing Points"
-description: Minimizing point distances<br/> <br/> Difficulty ★★
+title: "Day 1: Historian Hysteria"
+description: List comparison and matching<br/> <br/> Difficulty ★★
 layout: nested
 ---
 
-# Day 1: Pairing Points
+# Day 1: Historian Hysteria
 
 [**link**](https://adventofcode.com/2024/day/1)
 
@@ -14,30 +14,18 @@ layout: nested
 
 ## Description
 
-The first problem of Advent of Code 2024 involves processing pairs of numbers and finding optimal pairings or matches between them.
+The first problem of Advent of Code 2024 involves helping Elvish Senior Historians reconcile two different lists of location IDs. The Chief Historian has gone missing, and these lists might help track him down - but they don't quite match up.
 
 ## Part 1
 
-In part 1, we need to find the absolute difference between corresponding pairs of numbers from two sequences. The solution uses a heap-based approach to efficiently process the numbers:
+In part 1, we need to find how different the two lists are by pairing up numbers from each list and calculating their distances. Specifically:
 
-1. Two min-heaps are maintained: one for left values and one for right values
-2. Numbers are pushed into their respective heaps
-3. Numbers are popped from both heaps simultaneously to compute differences
-4. The sum of all differences is returned
+1. Match the smallest number from the left list with the smallest from the right list
+2. Continue matching second-smallest with second-smallest, and so on
+3. Calculate the absolute difference between each pair
+4. Sum up all the differences
 
-The use of heaps ensures we're always working with the smallest available numbers from each sequence.
-
-## Part 2
-
-Part 2 changes the approach by looking for matching pairs. Instead of finding differences, we need to count how many times each number appears in both sequences. The solution uses:
-
-1. A list for left values (maintaining order)
-2. A defaultdict for right values to count occurrences
-3. For each left value, multiply it by its count in the right sequence
-
-This approach efficiently handles the counting and matching of values between sequences.
-
-## Implementation Details
+The solution uses a heap-based approach to efficiently match numbers by size:
 
 ```python
 def part1():
@@ -53,7 +41,22 @@ def part1():
         res += abs(heapq.heappop(left) - heapq.heappop(right))
     assert(len(left) == len(right) == 0)
     return res
+```
 
+The use of heaps ensures we're always matching the current smallest numbers from each list, exactly as the problem requires.
+
+## Part 2
+
+Part 2 takes a different approach - instead of looking at differences, we need to find matching numbers between the lists. The theory is that matching numbers are actual location IDs, while differences might be misinterpreted handwriting.
+
+For each number in the left list, we need to:
+1. Count how many times it appears in the right list
+2. Multiply the number by its count in the right list
+3. Sum up all these products
+
+The solution uses a dictionary to efficiently count occurrences:
+
+```python
 def part2():
     left, right = [], defaultdict(int)
 
@@ -70,31 +73,29 @@ def part2():
 ## Algorithmic Analysis
 
 ### Part 1
-- Time Complexity: O(n log n) due to heap operations
+- Time Complexity: O(n log n) due to heap operations for sorting
 - Space Complexity: O(n) for storing values in heaps
 
 ### Part 2
-- Time Complexity: O(n) for both building the count dictionary and processing left values
-- Space Complexity: O(n) for storing the dictionary and list
+- Time Complexity: O(n) for building the count dictionary and processing left values
+- Space Complexity: O(n) for storing unique values and their counts
 
 ## Improvements
 
-Several potential improvements could be made:
+Possible improvements to the solution could include:
 
-1. Memory optimization: The current solution stores all values in memory. For very large inputs, we could process values in chunks.
-
-2. Early termination: If we know certain conditions about the input data, we might be able to stop processing early.
-
-3. Parallelization: For very large datasets, the counting in part 2 could potentially be parallelized.
-
-4. Input validation: The current solution assumes well-formed input. Adding validation could make it more robust.
+1. Input validation: The current solution assumes well-formed input with equal-length lists
+2. Memory optimization: For very large inputs, we could process values in chunks
+3. Early termination: If we know certain properties about the data (e.g., all numbers are unique), we could optimize certain operations
 
 ## Software Engineering
 
-The solution follows good software engineering practices:
+The solution demonstrates good practices:
 
 1. Clean separation between parts 1 and 2
-2. Use of appropriate data structures (heapq for ordered processing, defaultdict for counting)
-3. Clear variable names and logical structure
-4. Assertion to verify assumptions about the data
+2. Appropriate data structures for each task:
+   - Heaps for ordered processing in part 1
+   - defaultdict for efficient counting in part 2
+3. Clear variable names that reflect the problem domain (left/right for the two lists)
+4. Assertion to verify assumptions about the input data
 5. Modular file handling separate from core logic
