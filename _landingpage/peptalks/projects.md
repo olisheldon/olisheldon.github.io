@@ -9,6 +9,10 @@ _________________
 
  <!-- -  -->
 
+[**Advent of Code 2024**](https://olisheldon.github.io/projects/advent_of_code24.html)
+
+ <!-- -  -->
+
 [**Data Structures & Algos Notes**](https://olisheldon.github.io/projects/data_structures_and_algorithms.html)
 
  <!-- -  -->
