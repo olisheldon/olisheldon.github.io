@@ -1,6 +1,6 @@
 ---
 title: "Day 2: Red-Nosed Reports"
-description: Sequence validation <br/> Difficulty ★★
+description: Sequence Analysis <br/> Difficulty ★★
 layout: nested
 ---
 
@@ -14,54 +14,36 @@ layout: nested
 
 ## Description
 
-This problem involves analyzing safety reports from a Red-Nosed reactor. Each report contains a sequence of levels that need to follow specific safety rules.
+This problem involves analyzing sequences of numbers to determine if they follow specific patterns. A sequence is considered "safe" if it is either strictly increasing or strictly decreasing, with adjacent numbers differing by at least 1 and at most 3.
 
 ## Part 1
 
-For a report to be considered safe, it must satisfy two conditions:
-1. The levels must be either strictly increasing or strictly decreasing
-2. Adjacent levels must differ by at least 1 and at most 3
+The solution leverages Python's zip() function for elegant pairwise comparisons. The safe() function checks two conditions:
+1. The sequence is either all increasing or all decreasing (using two all() checks with zip())
+2. Adjacent differences are within the required range (using another all() with zip())
 
-The solution uses Python's list comprehension and `zip` function to elegantly check these conditions:
-- `zip(report, report[1:])` creates pairs of adjacent values
-- `all(x < y for x, y in ...)` checks if all pairs are increasing
-- `all(x > y for x, y in ...)` checks if all pairs are decreasing
-- `all(1 <= abs(x - y) <= 3 for x, y in ...)` verifies the difference constraints
+This approach avoids manual indexing and provides a clear, functional implementation.
 
 ## Part 2
 
-Part 2 introduces a "Problem Dampener" that can ignore one level in an otherwise unsafe report. This transforms the problem into checking if removing any single value from the sequence could make it safe.
+Part 2 introduces the "Problem Dampener" concept, where we can remove one number to potentially make an unsafe sequence safe. The solution uses generator expressions to:
+1. Generate all possible sequences with one number removed
+2. Check if any of these modified sequences are safe
+3. Sum up the total number of sequences that can be made safe
 
-The solution uses nested generators to efficiently:
-1. Generate all possible modified reports by removing one value at a time
-2. Check if any of these modified reports are safe
-3. Count the total number of reports that are either naturally safe or can be made safe
+The implementation maintains efficiency by using generators rather than creating full lists of possibilities.
 
 ## Improvements
 
 ### Algorithms
 
-The current solution has a time complexity of:
-- Part 1: O(n*m) where n is number of reports and m is length of each report
-- Part 2: O(n*m²) due to checking each possible removal
-
-Potential improvements:
-- For Part 2, we could optimize by early stopping when we find the first valid modification
-- We could cache common subsequences that are known to be safe/unsafe
+The current solution has O(n²) complexity for part 2, as we need to check n-1 possible sequences (removing one number each time) for each input sequence. Given the problem constraints, this is unavoidable as we need to try removing each number.
 
 ### Software Engineering
 
-The solution demonstrates good use of Python's functional programming features:
-- Generator expressions to avoid storing intermediate results
-- The `zip` function for pairwise iteration
-- List comprehensions for concise data transformation
+The solution demonstrates good use of:
+1. Generator expressions for memory efficiency
+2. Functional programming concepts with all() and zip()
+3. Clean separation of core logic (safe()) from the part-specific implementations
 
-The `safe()` function is well-designed as it:
-- Has a single responsibility (checking if a report is safe)
-- Is pure (same input always produces same output)
-- Is reusable between both parts
-
-## Solution
-
-<div class="aside">
-<iframe frameborder="0" scrolling="yes" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2Faoc24%2Fblob%2Fmain%2Fpython%2Fday2.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>
+One potential improvement would be to add type hints and docstrings for better code documentation.
