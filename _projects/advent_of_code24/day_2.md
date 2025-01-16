@@ -47,3 +47,9 @@ The solution demonstrates good use of:
 3. Clean separation of core logic (safe()) from the part-specific implementations
 
 One potential improvement would be to add type hints and docstrings for better code documentation.
+
+## Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="yes" style="width:100%; height:800px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2Faoc24%2Fblob%2Fmain%2Fpython%2Fday2.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>
+</div>
