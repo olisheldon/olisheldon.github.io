@@ -1,7 +1,7 @@
 ---
 layout: nested
 title: Advent of Code 2023
-description: Explanations to my Advent of Code 2023 solutions
+description: 48/50 ★ Explanations to my Advent of Code 2023 solutions
 files:
   - 'day_1'
   - 'day_2'

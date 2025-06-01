@@ -1,7 +1,7 @@
 ---
 layout: nested
 title: Advent of Code 2024
-description: Explanations to my Advent of Code 2024 solutions
+description: 50/50 ★ Explanations to my Advent of Code 2024 solutions
 files:
   - 'day_1'
   - 'day_2'
