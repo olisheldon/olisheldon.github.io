@@ -1,6 +1,6 @@
 ---
 title: "Day 24: Crossed Wires"
-description: Logic Gates and Debugging Swapped Wires <br/> Difficulty ★★★★
+description: Logic Gates and Debugging Swapped Wires <br/> Difficulty ★★★
 layout: nested
 ---
 

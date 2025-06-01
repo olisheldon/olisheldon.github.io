@@ -1,6 +1,6 @@
 ---
 title: "Day 25: Code Chronicle"
-description: Array Processing & Pattern Matching <br/> Difficulty ★★☆
+description: Array Processing & Pattern Matching <br/> Difficulty ★★
 layout: nested
 ---
 

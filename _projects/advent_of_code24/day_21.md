@@ -1,6 +1,6 @@
 ---
 title: "Day 21: Keypad Conundrum"
-description: Chain of Robots <br/> Difficulty ★★★★
+description: Chain of Robots <br/> Difficulty ★★★
 layout: nested
 ---
 
