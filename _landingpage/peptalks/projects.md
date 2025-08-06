@@ -13,10 +13,6 @@ _________________
 
  <!-- -  -->
 
-[**Data Structures & Algos Notes**](https://olisheldon.github.io/projects/data_structures_and_algorithms.html)
-
- <!-- -  -->
-
-[**Data Structures & Algos Applications**](https://olisheldon.github.io/projects/algorithm_applications.html)
+[**AlgoRecall - Mastering LeetCode with Spaced Repetition**](https://leetcode-anki.web.app/)
 
  <!-- -  -->
