@@ -1,6 +1,6 @@
 ---
 title: "Day 22: Monkey Market"
-description: Pseudorandom Number Games <br/> <br/> Difficulty ★★
+description: Pseudorandom Number Games <br/> Difficulty ★★
 layout: nested
 ---
 

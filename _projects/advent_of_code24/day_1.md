@@ -1,6 +1,6 @@
 ---
 title: "Day 1: Historian Hysteria"
-description: List comparison and matching<br/> <br/> Difficulty ★★
+description: List comparison and matching <br/> Difficulty ★★
 layout: nested
 ---
 
