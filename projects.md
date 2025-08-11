@@ -3,8 +3,7 @@ layout: nested
 title: Projects
 navbaritem: true
 subfolders:
-  - 'advent_of_code23'
+  - 'algorecall'
   - 'advent_of_code24'
-  - 'data_structures_and_algorithms'
-  - 'algorithm_applications'
+  - 'advent_of_code23'
 ---
