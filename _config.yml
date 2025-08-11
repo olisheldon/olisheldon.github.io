@@ -28,6 +28,10 @@ logo: assets/img/headshot_circle.png
 github_button:
   user: olisheldon
 
+# Github data, if present there will be a GitHub button in the navbar
+linkedin_button:
+  user: ojsheldon
+
 # Twitter data, if present there will be a Twitter button in the navbar
 # twitter_button:
 #   user: SanfteSchorle
