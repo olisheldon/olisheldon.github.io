@@ -37,3 +37,14 @@ files:
 [**code**](https://github.com/olisheldon/aoc24/)
 
 The pages found below document my solutions to the 2024 Advent of Code puzzles written in Python. These pages describe the problems, discuss my thought process, and detail my solutions to them. Within each page I also provide a critique of my solution in terms of computational efficiency and software quality.
+
+### Most Interesting Problems
+
+| Day  | Description                                                              |
+|------|--------------------------------------------------------------------------|
+| 12   | Region pricing; DFS perimeters, BFS side count via half-grid corners.     |
+| 14   | Toroidal robots; direct time indexing + min safety factor to spot the tree. |
+| 17   | 3-bit CPU sim; reverse-engineered a quine via 3-bit recursive search.    |
+| 20   | Maze with cheating; cached shortest paths + cheat reachability savings.  |
+| 21   | Robot-chain keypad; precomputed paths + DP memoization across 26 layers. |
+| 24   | Logic-gate adder; found swapped wires via pattern checks and greedy swaps.|
