@@ -63,8 +63,16 @@ The solution demonstrates good separation of concerns:
 
 One potential improvement would be to unify the approaches between Part 1 and Part 2, perhaps using the more efficient Counter-based approach for both parts.
 
-## Solution
+## Solutions
+
+### Python Solution
 
 <div class="aside">
 <iframe frameborder="0" scrolling="yes" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2Faoc24%2Fblob%2Fmain%2Fpython%2Fday11.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>
+</div>
+
+### Agentic C++ translation of Python Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="yes" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2Faoc24%2Fblob%2Fmain%2Fagentic_ai_translations%2Fcpp%2Fday11.cpp&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>
 </div>

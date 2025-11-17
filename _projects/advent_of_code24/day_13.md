@@ -71,8 +71,16 @@ The solution is structured with separate functions for:
 
 This separation of concerns makes the code more maintainable and allows reuse of common functionality. The parsing function is particularly helpful as it transforms the text input into a structured format that both part 1 and part 2 can use.
 
-## Solution
+## Solutions
+
+### Python Solution
 
 <div class="aside">
 <iframe frameborder="0" scrolling="yes" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2Faoc24%2Fblob%2Fmain%2Fpython%2Fday13.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>
+</div>
+
+### Agentic C++ translation of Python Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="yes" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2Faoc24%2Fblob%2Fmain%2Fagentic_ai_translations%2Fcpp%2Fday13.cpp&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>
 </div>

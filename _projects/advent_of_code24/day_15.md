@@ -61,8 +61,16 @@ An alternative approach might have been to use a more abstract data structure to
 
 One challenge was handling cases where boxes are pushed against walls or other boxes. The solution carefully checks if a move is valid by examining the entire path before committing to the move. For part 2, this becomes more complex as we need to check if all parts of a wide box can move without encountering obstacles.
 
-## Solution
+## Solutions
+
+### Python Solution
 
 <div class="aside">
 <iframe frameborder="0" scrolling="yes" style="width:100%; height:2200px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2Faoc24%2Fblob%2Fmain%2Fpython%2Fday15.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>
+</div>
+
+### Agentic C++ translation of Python Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="yes" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2Faoc24%2Fblob%2Fmain%2Fagentic_ai_translations%2Fcpp%2Fday15.cpp&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>
 </div>

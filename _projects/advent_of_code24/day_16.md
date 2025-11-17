@@ -77,8 +77,16 @@ The code uses clear separation between parts 1 and 2, with Part 2 being a natura
 
 The direction handling could be simplified by using complex numbers or 2D vectors, but the current enum-based approach provides clear semantics and easy rotation operations.
 
-## Solution
+## Solutions
+
+### Python Solution
 
 <div class="aside">
 <iframe frameborder="0" scrolling="yes" style="width:100%; height:2500px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2Faoc24%2Fblob%2Fmain%2Fpython%2Fday16.py&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>
+</div>
+
+### Agentic C++ translation of Python Solution
+
+<div class="aside">
+<iframe frameborder="0" scrolling="yes" style="width:100%; height:1972px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Folisheldon%2Faoc24%2Fblob%2Fmain%2Fagentic_ai_translations%2Fcpp%2Fday16.cpp&style=github-dark&type=code&showBorder=on&showLineNumbers=on&showCopy=on&fetchFromJsDelivr=on"></iframe>
 </div>
