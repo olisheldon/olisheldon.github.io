@@ -8,7 +8,7 @@ files:
   - 'implementation'
 ---
 
-# [**AlgoRecall - Check it out!**](https://leetcode-anki.web.app/)
+# [🔗 **AlgoRecall - Check it out!**](https://leetcode-anki.web.app/)
 
 `A Progressive Web App that helps you practice LeetCode problems using spaced repetition learning techniques. This platform optimizes memory retention through scientifically-proven algorithms to help developers prepare for technical interviews more efficiently.`
 
