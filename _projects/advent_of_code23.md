@@ -30,15 +30,15 @@ files:
   - 'day_25'
 ---
 
-# [**Advent of Code 2023**](https://adventofcode.com/2023)
+# [🔗 **Advent of Code 2023**](https://adventofcode.com/2023)
 
 `Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like. People use them as interview prep, company training, university coursework, practice problems, a speed contest, or to challenge each other.`
 
-[**code**](https://github.com/olisheldon/AdventOfCode23/)
+## [🔗 **View Code on GitHub**](https://github.com/olisheldon/AdventOfCode23/)
 
 The pages found below document my solutions to the 2023 Advent of Code puzzles written in Python. These pages describe the problems, discuss my thought process, and detail my solutions to them. Within each page I also provide a critique of my solution in terms of computational efficiency and software quality.
 
-### Most Interesting Problems
+## Most Interesting Problems
 
 These problems were particularly interesting this year!
 
@@ -52,6 +52,8 @@ These problems were particularly interesting this year!
 |     19     | Another difficult interval problem!                                   |
 |     20     | Use of Abstract Base Class to declare interface.                      |
 |     23     | Longest path in a graph while utilizing edge contraction.             |
+
+## Solutions
 
 <!-- # Index -->
 

@@ -30,11 +30,11 @@ files:
   - 'day_25'
 ---
 
-# [**Advent of Code 2024**](https://adventofcode.com/2024)
+# [🔗 **Advent of Code 2024**](https://adventofcode.com/2024)
 
 `Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like. People use them as interview prep, company training, university coursework, practice problems, a speed contest, or to challenge each other.`
 
-[**code**](https://github.com/olisheldon/aoc24/)
+## [🔗 **View Code on GitHub**](https://github.com/olisheldon/aoc24/)
 
 The pages found below document my solutions to the 2024 Advent of Code puzzles written in Python. These pages describe the problems, discuss my thought process, and detail my solutions to them. Within each page I also provide a critique of my solution in terms of computational efficiency and software quality.
 
@@ -48,3 +48,6 @@ The pages found below document my solutions to the 2024 Advent of Code puzzles w
 | 20   | Maze with cheating; cached shortest paths + cheat reachability savings.  |
 | 21   | Robot-chain keypad; precomputed paths + DP memoization across 26 layers. |
 | 24   | Logic-gate adder; found swapped wires via pattern checks and greedy swaps.|
+
+## Solutions
+
